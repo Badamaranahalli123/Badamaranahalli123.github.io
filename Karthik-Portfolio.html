@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karthik B K | AI/ML Engineer</title>
-  <meta name="description" content="AI/ML Engineer with 4+ years experience. B.Tech CSE (AIML) at PESIT. Open for internships & full-time roles.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <meta name="description" content="AI/ML Engineer, CSE AIML at PES University. Open for internships & full-time roles.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -16,132 +16,127 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      background: #ffffff;
+      color: #111827;
       line-height: 1.5;
     }
 
-    /* Light Theme */
-    body.light {
-      --bg-primary: #f8fafc;
-      --bg-secondary: #ffffff;
-      --bg-card: #ffffff;
-      --text-primary: #0f172a;
-      --text-secondary: #475569;
-      --text-muted: #94a3b8;
-      --border: #e2e8f0;
-      --accent: #2563eb;
-      --accent-dark: #1d4ed8;
-      --accent-light: rgba(37, 99, 235, 0.08);
-      --header-bg: rgba(255, 255, 255, 0.98);
-      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
-    }
-
-    /* Dark Theme */
-    body.dark {
-      --bg-primary: #0f172a;
-      --bg-secondary: #1e293b;
-      --bg-card: #1e293b;
-      --text-primary: #f1f5f9;
-      --text-secondary: #cbd5e1;
-      --text-muted: #64748b;
-      --border: #334155;
-      --accent: #3b82f6;
-      --accent-dark: #2563eb;
-      --accent-light: rgba(59, 130, 246, 0.1);
-      --header-bg: rgba(15, 23, 42, 0.98);
-      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
-    }
-
-    body {
-      background: var(--bg-primary);
-      color: var(--text-primary);
-    }
-
     .container {
-      max-width: 1120px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 28px;
+      padding: 0 32px;
     }
-
-    /* Theme Toggle */
-    .theme-toggle {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 1000;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 40px;
-      padding: 10px 16px;
-      display: flex;
-      gap: 10px;
-      cursor: pointer;
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-md);
-      transition: all 0.2s ease;
-    }
-    .theme-toggle:hover { transform: scale(1.02); }
-    .theme-icon { font-size: 1rem; transition: all 0.2s; opacity: 0.5; }
-    body.light .light-icon, body.dark .dark-icon { opacity: 1; color: var(--accent); }
 
     /* Header */
     header {
-      background: var(--header-bg);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+      border-bottom: 1px solid #eef2f6;
       position: sticky;
       top: 0;
       z-index: 100;
     }
+
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 0;
+      padding: 20px 0;
       flex-wrap: wrap;
       gap: 20px;
     }
-    .logo { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.3px; color: var(--text-primary); }
-    .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a { text-decoration: none; font-weight: 500; color: var(--text-secondary); font-size: 0.9rem; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--accent); }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: #111827;
+    }
+
+    .logo span {
+      color: #2563eb;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #4b5563;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
 
     /* Hero */
-    .hero { padding: 80px 0 60px; text-align: center; }
+    .hero {
+      padding: 70px 0 50px;
+      text-align: center;
+      border-bottom: 1px solid #eef2f6;
+    }
+
     .hero-badge {
       display: inline-block;
-      background: var(--accent-light);
-      color: var(--accent);
-      padding: 5px 14px;
+      background: #eef2ff;
+      color: #2563eb;
+      padding: 4px 14px;
       border-radius: 30px;
       font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.3px;
       margin-bottom: 24px;
     }
-    .hero h1 { font-size: 3rem; font-weight: 700; letter-spacing: -1px; margin-bottom: 20px; }
-    .hero-highlight { color: var(--accent); border-bottom: 3px solid var(--accent); display: inline-block; }
-    .hero-desc { font-size: 1rem; color: var(--text-secondary); max-width: 580px; margin: 0 auto 28px; line-height: 1.6; }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+
+    .hero-highlight {
+      color: #2563eb;
+      border-bottom: 3px solid #2563eb;
+      display: inline-block;
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: #6b7280;
+      max-width: 560px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+
     .availability {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(34, 197, 94, 0.12);
-      color: #22c55e;
+      background: #f0fdf4;
+      color: #16a34a;
       padding: 8px 20px;
       border-radius: 40px;
       font-size: 0.8rem;
       font-weight: 500;
       margin-top: 16px;
     }
-    .btn-group { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
     .btn-primary {
-      background: var(--accent);
+      background: #111827;
       color: white;
       padding: 10px 28px;
       border-radius: 40px;
@@ -153,11 +148,16 @@
       gap: 8px;
       transition: all 0.2s;
     }
-    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 14px var(--accent-light); }
+
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
     .btn-outline {
       background: transparent;
-      border: 1.5px solid var(--border);
-      color: var(--text-secondary);
+      border: 1.5px solid #e5e7eb;
+      color: #4b5563;
       padding: 9px 26px;
       border-radius: 40px;
       text-decoration: none;
@@ -168,86 +168,318 @@
       gap: 8px;
       transition: all 0.2s;
     }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    .btn-outline:hover {
+      border-color: #2563eb;
+      color: #2563eb;
+    }
 
     /* Sections */
-    section { padding: 70px 0; border-bottom: 1px solid var(--border); }
-    .section-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 40px; }
-    .section-title { font-size: 1.6rem; font-weight: 600; letter-spacing: -0.3px; }
-    .section-link { color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid #eef2f6;
+    }
 
-    /* Featured Project Card */
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #111827;
+    }
+
+    .section-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* Featured Project */
     .featured-card {
-      background: var(--bg-card);
-      border-radius: 24px;
+      background: #f8fafc;
+      border-radius: 20px;
       padding: 32px;
       margin-bottom: 32px;
-      border: 1px solid var(--border);
-      transition: all 0.3s ease;
+      border: 1px solid #eef2f6;
+      transition: all 0.25s;
     }
-    .featured-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
-    .featured-badge { display: inline-block; background: var(--accent); color: white; font-size: 0.65rem; font-weight: 600; padding: 3px 10px; border-radius: 30px; margin-bottom: 16px; letter-spacing: 0.3px; }
-    .featured-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; }
-    .featured-meta { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; font-size: 0.8rem; color: var(--text-muted); }
-    .featured-desc { color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6; }
 
-    /* Regular Card */
-    .card {
-      background: var(--bg-card);
-      border-radius: 20px;
-      padding: 28px;
-      margin-bottom: 24px;
-      border: 1px solid var(--border);
-      transition: all 0.25s ease;
+    .featured-card:hover {
+      border-color: #2563eb;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     }
-    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-    .card-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 6px; }
-    .card-sub { color: var(--accent); font-size: 0.8rem; font-weight: 500; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-    .card-date { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 14px; }
-    .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
-    .tech-tag { background: var(--accent-light); color: var(--accent); padding: 4px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 500; }
-    .project-link { background: transparent; border: 1px solid var(--border); padding: 6px 16px; border-radius: 30px; text-decoration: none; color: var(--text-secondary); font-size: 0.75rem; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s; margin-right: 10px; margin-top: 8px; }
-    .project-link:hover { border-color: var(--accent); color: var(--accent); }
+
+    .featured-badge {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 30px;
+      margin-bottom: 16px;
+    }
+
+    .featured-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .featured-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+
+    .featured-desc {
+      color: #4b5563;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
+
+    /* Regular Cards */
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid #eef2f6;
+      transition: all 0.2s;
+    }
+
+    .card:hover {
+      border-color: #d1d5db;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #111827;
+    }
+
+    .card-sub {
+      color: #2563eb;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .card-date {
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-bottom: 12px;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: #4b5563;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .tech-tag {
+      background: #f3f4f6;
+      color: #374151;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+
+    .project-link {
+      background: transparent;
+      border: 1px solid #e5e7eb;
+      padding: 5px 14px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 0.7rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+      margin-right: 8px;
+      margin-top: 8px;
+    }
+
+    .project-link:hover {
+      border-color: #2563eb;
+      color: #2563eb;
+    }
+
+    /* Education & Experience Cards */
+    .info-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid #eef2f6;
+    }
+
+    .info-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #111827;
+    }
+
+    .info-sub {
+      font-size: 0.8rem;
+      color: #2563eb;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .info-date {
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-bottom: 12px;
+    }
+
+    .info-desc {
+      font-size: 0.85rem;
+      color: #4b5563;
+      line-height: 1.5;
+    }
 
     /* Cert Grid */
-    .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-    .cert-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; transition: all 0.2s; }
-    .cert-item:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .cert-name { font-weight: 600; font-size: 0.85rem; margin-bottom: 4px; }
-    .cert-issuer { font-size: 0.7rem; color: var(--accent); margin-bottom: 4px; }
-    .cert-date { font-size: 0.65rem; color: var(--text-muted); }
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 14px;
+    }
+
+    .cert-item {
+      background: #ffffff;
+      border: 1px solid #eef2f6;
+      border-radius: 12px;
+      padding: 14px 16px;
+      transition: all 0.2s;
+    }
+
+    .cert-item:hover {
+      border-color: #2563eb;
+    }
+
+    .cert-name {
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 4px;
+      color: #111827;
+    }
+
+    .cert-issuer {
+      font-size: 0.7rem;
+      color: #2563eb;
+      margin-bottom: 4px;
+    }
+
+    .cert-date {
+      font-size: 0.65rem;
+      color: #9ca3af;
+    }
 
     /* Contact */
-    .contact-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 32px; }
-    .contact-btn { background: var(--bg-card); border: 1px solid var(--border); border-radius: 50px; padding: 10px 24px; text-decoration: none; color: var(--text-secondary); font-weight: 500; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 10px; transition: all 0.2s; }
-    .contact-btn i { color: var(--accent); }
-    .contact-btn:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
 
-    footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 0.7rem; border-top: 1px solid var(--border); }
+    .contact-btn {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 50px;
+      padding: 10px 24px;
+      text-decoration: none;
+      color: #4b5563;
+      font-weight: 500;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+
+    .contact-btn i {
+      color: #2563eb;
+    }
+
+    .contact-btn:hover {
+      border-color: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      color: #9ca3af;
+      font-size: 0.7rem;
+      border-top: 1px solid #eef2f6;
+    }
 
     @media (max-width: 700px) {
-      .hero h1 { font-size: 2rem; }
-      nav { flex-direction: column; }
-      .nav-links { gap: 24px; }
-      .section-title { font-size: 1.3rem; }
-      .featured-title { font-size: 1.2rem; }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+      .nav-links {
+        gap: 24px;
+      }
+      .section-title {
+        font-size: 1.3rem;
+      }
+      .featured-card {
+        padding: 20px;
+      }
+      .featured-title {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
-<body class="light">
-
-<div class="theme-toggle" id="themeToggle">
-  <i class="fas fa-sun theme-icon light-icon"></i>
-  <i class="fas fa-moon theme-icon dark-icon"></i>
-</div>
+<body>
 
 <header>
   <div class="container">
     <nav>
       <div class="logo">Karthik <span>BK</span></div>
       <ul class="nav-links">
-        <li><a href="#home">Work</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -259,100 +491,127 @@
   <div class="container">
     <!-- Hero -->
     <section id="home" class="hero">
-      <div class="hero-badge">B.Tech CSE (AI/ML) · PES Institute of Technology</div>
-      <h1>AI/ML Engineer <span class="hero-highlight">Building Production-Grade</span> Intelligence</h1>
+      <div class="hero-badge">AI/ML Engineer</div>
+      <h1>Karthik B K</h1>
       <div class="hero-desc">
-        4+ years of hands-on experience in machine learning, full-stack deployment, and data-driven solutions.
+        Building production-grade AI solutions with 4+ years of hands-on experience in machine learning and full-stack deployment.
       </div>
       <div class="btn-group">
-        <a href="#featured" class="btn-primary"><i class="fas fa-star"></i> Featured Work</a>
-        <a href="#contact" class="btn-outline"><i class="fas fa-comment"></i> Contact Me</a>
+        <a href="#projects" class="btn-primary"><i class="fas fa-code"></i> View Projects</a>
+        <a href="#contact" class="btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
       </div>
       <div class="availability">
         <i class="fas fa-briefcase"></i> Available for Internship | Internship with PPO | Full-Time
       </div>
     </section>
 
-    <!-- Featured Project Section (Eye-catching) -->
+    <!-- Featured Project -->
     <section id="featured">
       <div class="section-header">
         <h2 class="section-title">Featured Project</h2>
-        <a href="#projects" class="section-link">View all →</a>
+        <a href="#projects" class="section-link">All projects →</a>
       </div>
       <div class="featured-card">
-        <div class="featured-badge">⭐ FLAGSHIP PROJECT</div>
+        <div class="featured-badge">FLAGSHIP</div>
         <div class="featured-title">Stock Analyzer for Beginners</div>
         <div class="featured-meta">
-          <span><i class="fas fa-user"></i> Solo Project · Full-Stack</span>
+          <span><i class="fas fa-user"></i> Solo Project</span>
           <span><i class="fas fa-calendar"></i> Apr 2025 – Present</span>
           <span><i class="fas fa-shield-alt"></i> Security Layer in Progress</span>
         </div>
         <div class="featured-desc">
-          A complete investment platform for beginner investors with authentication, real-time market data, 
-          portfolio recommendations, and email automation. Currently adding enterprise-grade security before public deployment.
+          Complete investment platform for beginners with authentication, real-time market data, portfolio recommendations, 
+          and email automation. Currently implementing enterprise-grade security before public deployment.
         </div>
         <div class="tech-stack">
           <span class="tech-tag">Python/Flask</span>
-          <span class="tech-tag">JWT Authentication</span>
+          <span class="tech-tag">JWT</span>
           <span class="tech-tag">PostgreSQL</span>
           <span class="tech-tag">Yahoo Finance API</span>
-          <span class="tech-tag">SMTP Email</span>
+          <span class="tech-tag">SMTP</span>
         </div>
-        <a href="https://drive.google.com/file/d/1EUKmjOkv4Dw7kefl4ztw4h4dgEsQRUfY/view?usp=sharing" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i> View Documentation</a>
+        <a href="https://drive.google.com/file/d/1EUKmjOkv4Dw7kefl4ztw4h4dgEsQRUfY/view?usp=sharing" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i> Documentation</a>
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects">
       <div class="section-header">
-        <h2 class="section-title">All Projects</h2>
-        <a href="#featured" class="section-link">Back to top ↑</a>
+        <h2 class="section-title">Projects</h2>
+        <a href="#featured" class="section-link">↑ Back to top</a>
       </div>
 
       <div class="card">
         <div class="card-title">Employee Burnout Analysis</div>
-        <div class="card-sub"><i class="fas fa-chart-line"></i> Solo · ML Dashboard</div>
+        <div class="card-sub">Solo · Machine Learning</div>
         <div class="card-date">Jan 2026 – Mar 2026</div>
-        <p>Predictive ML system achieving 89% accuracy in identifying burnout risk using psychological and work pattern data.</p>
+        <div class="card-desc">Predictive ML system achieving 89% accuracy in identifying burnout risk using psychological and work pattern data.</div>
         <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Streamlit</span></div>
         <a href="https://employee-engagement-burnout-analysis-fuk6jviq6k8dh8n9jcrjap.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
       </div>
 
       <div class="card">
         <div class="card-title">Predictive Maintenance · 6G Anomaly Detection</div>
-        <div class="card-sub"><i class="fas fa-microchip"></i> Solo · Industrial AI</div>
+        <div class="card-sub">Solo · Industrial AI</div>
         <div class="card-date">Oct 2025 – Present</div>
-        <p>Anomaly detection using isolation forests & autoencoders. Reduces equipment failure prediction time by 40%.</p>
+        <div class="card-desc">Anomaly detection using isolation forests & autoencoders. Reduces equipment failure prediction time by 40%.</div>
         <div class="tech-stack"><span class="tech-tag">Anomaly Detection</span><span class="tech-tag">Autoencoders</span><span class="tech-tag">Python</span></div>
         <a href="https://predictive-maintenance-6g-anomaly-detection.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-chart-line"></i> Live Demo</a>
       </div>
 
       <div class="card">
         <div class="card-title">SunnyAI · Intelligent Assistant</div>
-        <div class="card-sub"><i class="fas fa-robot"></i> Solo · LLM Chatbot</div>
+        <div class="card-sub">Solo · LLM Chatbot</div>
         <div class="card-date">2025 – 2026</div>
-        <p>Conversational AI with context retention. Processes 100+ daily queries with <2s response time.</p>
+        <div class="card-desc">Conversational AI with context retention. Processes 100+ daily queries with sub-2 second response time.</div>
         <div class="tech-stack"><span class="tech-tag">LLM</span><span class="tech-tag">Streamlit</span><span class="tech-tag">Python</span></div>
         <a href="https://sunnyai-karthikbk.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-comment"></i> Try Demo</a>
       </div>
 
       <div class="card">
         <div class="card-title">Advanced Stock Analyzer</div>
-        <div class="card-sub"><i class="fas fa-users"></i> Group Project · Technical Lead</div>
+        <div class="card-sub">Group Project · Technical Lead</div>
         <div class="card-date">Sep 2025 – Feb 2026</div>
-        <p>Led a team of 4 to build technical indicators, backtesting engine, and sentiment analysis for experienced investors.</p>
+        <div class="card-desc">Led a team of 4 to build technical indicators, backtesting engine, and sentiment analysis for experienced investors.</div>
         <div class="tech-stack"><span class="tech-tag">Technical Analysis</span><span class="tech-tag">Backtesting</span><span class="tech-tag">FastAPI</span></div>
+      </div>
+    </section>
+
+    <!-- Education & Experience -->
+    <section id="education">
+      <div class="section-header">
+        <h2 class="section-title">Education & Experience</h2>
+      </div>
+
+      <div class="info-card">
+        <div class="info-title">B.Tech Computer Science (AI/ML)</div>
+        <div class="info-sub">PES University · SIUB Branch</div>
+        <div class="info-date">2022 – 2026</div>
+        <div class="info-desc">Specialization in Artificial Intelligence and Machine Learning. Final semester student.</div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-title">Technical Intern</div>
+        <div class="info-sub">Rakshan Earth and Space Technologies · Bengaluru</div>
+        <div class="info-date">Feb 1 – May 1, 2026 (4 months)</div>
+        <div class="info-desc">Full-stack development, ML model training, and data analysis for space technology applications.</div>
+        <div class="tech-stack" style="margin-top: 12px;">
+          <span class="tech-tag">Full-Stack Dev</span>
+          <span class="tech-tag">ML Models</span>
+          <span class="tech-tag">Data Analysis</span>
+          <span class="tech-tag">Python</span>
+        </div>
       </div>
     </section>
 
     <!-- Certifications -->
     <section id="certifications">
       <div class="section-header">
-        <h2 class="section-title">Licenses & Certifications</h2>
-        <span class="section-link">14+ credentials</span>
+        <h2 class="section-title">Certifications</h2>
+        <span class="section-link">14 credentials</span>
       </div>
       <div class="certs-grid">
-        <div class="cert-item"><div class="cert-name">International Online Olympiad</div><div class="cert-issuer">Galvanize Global Education</div><div class="cert-date">Feb 2026</div></div>
+        <div class="cert-item"><div class="cert-name">International Online Olympiad</div><div class="cert-issuer">Galvanize</div><div class="cert-date">Feb 2026</div></div>
         <div class="cert-item"><div class="cert-name">Kruu Grasp 2026 Hackathon</div><div class="cert-issuer">Kruu</div><div class="cert-date">Feb 2026</div></div>
         <div class="cert-item"><div class="cert-name">Artificial Intelligence Intern</div><div class="cert-issuer">Codec Technologies</div><div class="cert-date">Feb 2026</div></div>
         <div class="cert-item"><div class="cert-name">Data Fundamentals</div><div class="cert-issuer">IBM</div><div class="cert-date">Nov 2025</div></div>
@@ -368,25 +627,29 @@
       </div>
     </section>
 
-    <!-- Experience & Skills -->
+    <!-- Skills -->
     <section id="skills">
       <div class="section-header">
         <h2 class="section-title">Technical Skills</h2>
       </div>
       <div class="card">
         <div class="tech-stack" style="gap: 10px;">
-          <span class="tech-tag">Python</span><span class="tech-tag">Java</span><span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">PostgreSQL</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Git/GitHub</span>
-          <span class="tech-tag">AWS</span><span class="tech-tag">Machine Learning</span><span class="tech-tag">Data Analysis</span>
-          <span class="tech-tag">Streamlit</span><span class="tech-tag">Power BI</span><span class="tech-tag">FastAPI</span>
-          <span class="tech-tag">JWT</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">LLM</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Java</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Git/GitHub</span>
+          <span class="tech-tag">AWS</span>
+          <span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">Data Analysis</span>
+          <span class="tech-tag">Streamlit</span>
+          <span class="tech-tag">Power BI</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">JWT</span>
+          <span class="tech-tag">Scikit-learn</span>
+          <span class="tech-tag">LLM</span>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-title" style="font-size: 1rem;">Experience</div>
-        <p><strong>Technical Intern</strong> · Rakshan Earth and Space Technologies</p>
-        <p style="color: var(--text-muted); font-size: 0.8rem;">2022 – 2026 · Bengaluru</p>
-        <p style="margin-top: 12px; font-size: 0.85rem;">Full-stack development, ML model training, and data analysis for space technology applications.</p>
       </div>
     </section>
 
@@ -401,8 +664,8 @@
         <a href="https://www.linkedin.com/in/karthik-bk-b5a964285/" target="_blank" class="contact-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
         <a href="https://drive.google.com/file/d/1Yb_MxSnyKSVcd_ABvw4fu8vS0d3gK5BH/view?usp=sharing" target="_blank" class="contact-btn"><i class="fas fa-file-alt"></i> Resume</a>
       </div>
-      <div style="text-align: center; margin-top: 40px;">
-        <p style="color: var(--text-muted); font-size: 0.85rem;">Final semester student at PESIT · Open for internships, PPO, and full-time roles</p>
+      <div style="text-align: center; margin-top: 32px;">
+        <p style="color: #6b7280; font-size: 0.8rem;">Final semester · CSE (AI/ML) · PES University · Open for opportunities</p>
       </div>
     </section>
   </div>
@@ -414,17 +677,5 @@
   </div>
 </footer>
 
-<script>
-  const themeToggle = document.getElementById('themeToggle');
-  const body = document.body;
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  body.classList.add(savedTheme);
-  themeToggle.addEventListener('click', () => {
-    const newTheme = body.classList.contains('light') ? 'dark' : 'light';
-    body.classList.remove('light', 'dark');
-    body.classList.add(newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
-</script>
 </body>
 </html>
