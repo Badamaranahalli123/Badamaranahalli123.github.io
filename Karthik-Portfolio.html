@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karthik B K | AI/ML Engineer</title>
-  <meta name="description" content="AI/ML Engineer, CSE AIML at PES University. Open for internships & full-time roles.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <meta name="description" content="AI/ML Engineer, B.Tech CSE AIML at PES University RR Campus. Open for internships & full-time roles.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -16,9 +16,43 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #111827;
+      transition: background-color 0.25s ease, color 0.25s ease;
       line-height: 1.5;
+    }
+
+    /* Light Theme */
+    body.light {
+      --bg-body: #f5f7fa;
+      --bg-surface: #ffffff;
+      --bg-card: #ffffff;
+      --text-primary: #0a0b0d;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+      --accent-light: #eef2ff;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+      --shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    }
+
+    /* Dark Theme */
+    body.dark {
+      --bg-body: #0f172a;
+      --bg-surface: #1e293b;
+      --bg-card: #1e293b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --accent: #60a5fa;
+      --accent-light: #1e293b;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    body {
+      background: var(--bg-body);
+      color: var(--text-primary);
     }
 
     .container {
@@ -27,15 +61,46 @@
       padding: 0 32px;
     }
 
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 10px 16px;
+      display: flex;
+      gap: 12px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+    }
+    .theme-toggle:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-hover);
+    }
+    .theme-icon {
+      font-size: 1rem;
+      transition: all 0.2s;
+      opacity: 0.5;
+    }
+    body.light .light-icon,
+    body.dark .dark-icon {
+      opacity: 1;
+      color: var(--accent);
+    }
+
     /* Header */
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #eef2f6;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 100;
+      backdrop-filter: blur(8px);
     }
-
     nav {
       display: flex;
       justify-content: space-between;
@@ -44,89 +109,77 @@
       flex-wrap: wrap;
       gap: 20px;
     }
-
     .logo {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 700;
       letter-spacing: -0.3px;
-      color: #111827;
+      color: var(--text-primary);
     }
-
     .logo span {
-      color: #2563eb;
+      color: var(--accent);
     }
-
     .nav-links {
       display: flex;
       gap: 36px;
       list-style: none;
     }
-
     .nav-links a {
       text-decoration: none;
       font-weight: 500;
-      color: #4b5563;
+      color: var(--text-secondary);
       font-size: 0.9rem;
       transition: color 0.2s;
     }
-
     .nav-links a:hover {
-      color: #2563eb;
+      color: var(--accent);
     }
 
     /* Hero */
     .hero {
       padding: 70px 0 50px;
       text-align: center;
-      border-bottom: 1px solid #eef2f6;
+      border-bottom: 1px solid var(--border);
     }
-
     .hero-badge {
       display: inline-block;
-      background: #eef2ff;
-      color: #2563eb;
-      padding: 4px 14px;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 5px 14px;
       border-radius: 30px;
       font-size: 0.7rem;
       font-weight: 600;
       margin-bottom: 24px;
     }
-
     .hero h1 {
       font-size: 2.8rem;
       font-weight: 700;
       letter-spacing: -0.8px;
-      color: #111827;
       margin-bottom: 16px;
     }
-
     .hero-highlight {
-      color: #2563eb;
-      border-bottom: 3px solid #2563eb;
+      color: var(--accent);
+      border-bottom: 3px solid var(--accent);
       display: inline-block;
     }
-
     .hero-desc {
       font-size: 1rem;
-      color: #6b7280;
+      color: var(--text-secondary);
       max-width: 560px;
       margin: 0 auto 24px;
       line-height: 1.6;
     }
-
     .availability {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #f0fdf4;
-      color: #16a34a;
+      background: rgba(34, 197, 94, 0.12);
+      color: #22c55e;
       padding: 8px 20px;
       border-radius: 40px;
       font-size: 0.8rem;
       font-weight: 500;
       margin-top: 16px;
     }
-
     .btn-group {
       display: flex;
       justify-content: center;
@@ -134,9 +187,8 @@
       flex-wrap: wrap;
       margin-top: 8px;
     }
-
     .btn-primary {
-      background: #111827;
+      background: var(--accent);
       color: white;
       padding: 10px 28px;
       border-radius: 40px;
@@ -148,16 +200,15 @@
       gap: 8px;
       transition: all 0.2s;
     }
-
     .btn-primary:hover {
-      background: #2563eb;
+      background: var(--accent);
+      filter: brightness(0.92);
       transform: translateY(-2px);
     }
-
     .btn-outline {
       background: transparent;
-      border: 1.5px solid #e5e7eb;
-      color: #4b5563;
+      border: 1.5px solid var(--border);
+      color: var(--text-secondary);
       padding: 9px 26px;
       border-radius: 40px;
       text-decoration: none;
@@ -168,18 +219,17 @@
       gap: 8px;
       transition: all 0.2s;
     }
-
     .btn-outline:hover {
-      border-color: #2563eb;
-      color: #2563eb;
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
     }
 
     /* Sections */
     section {
       padding: 60px 0;
-      border-bottom: 1px solid #eef2f6;
+      border-bottom: 1px solid var(--border);
     }
-
     .section-header {
       display: flex;
       justify-content: space-between;
@@ -187,39 +237,35 @@
       flex-wrap: wrap;
       margin-bottom: 32px;
     }
-
     .section-title {
       font-size: 1.5rem;
       font-weight: 600;
       letter-spacing: -0.3px;
-      color: #111827;
     }
-
     .section-link {
-      color: #2563eb;
+      color: var(--accent);
       text-decoration: none;
       font-size: 0.8rem;
       font-weight: 500;
     }
 
-    /* Featured Project */
+    /* Featured Card */
     .featured-card {
-      background: #f8fafc;
+      background: var(--bg-card);
       border-radius: 20px;
       padding: 32px;
       margin-bottom: 32px;
-      border: 1px solid #eef2f6;
+      border: 1px solid var(--border);
       transition: all 0.25s;
     }
-
     .featured-card:hover {
-      border-color: #2563eb;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
     }
-
     .featured-badge {
       display: inline-block;
-      background: #2563eb;
+      background: var(--accent);
       color: white;
       font-size: 0.65rem;
       font-weight: 600;
@@ -227,54 +273,46 @@
       border-radius: 30px;
       margin-bottom: 16px;
     }
-
     .featured-title {
       font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 10px;
-      color: #111827;
     }
-
     .featured-meta {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
       margin-bottom: 16px;
       font-size: 0.75rem;
-      color: #6b7280;
+      color: var(--text-muted);
     }
-
     .featured-desc {
-      color: #4b5563;
+      color: var(--text-secondary);
       margin-bottom: 20px;
       line-height: 1.6;
       font-size: 0.9rem;
     }
 
-    /* Regular Cards */
+    /* Cards */
     .card {
-      background: #ffffff;
+      background: var(--bg-card);
       border-radius: 16px;
       padding: 24px;
       margin-bottom: 20px;
-      border: 1px solid #eef2f6;
+      border: 1px solid var(--border);
       transition: all 0.2s;
     }
-
     .card:hover {
-      border-color: #d1d5db;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-hover);
     }
-
     .card-title {
       font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 6px;
-      color: #111827;
     }
-
     .card-sub {
-      color: #2563eb;
+      color: var(--accent);
       font-size: 0.75rem;
       font-weight: 500;
       margin-bottom: 8px;
@@ -283,43 +321,38 @@
       gap: 8px;
       flex-wrap: wrap;
     }
-
     .card-date {
       font-size: 0.7rem;
-      color: #9ca3af;
+      color: var(--text-muted);
       margin-bottom: 12px;
     }
-
     .card-desc {
       font-size: 0.85rem;
-      color: #4b5563;
+      color: var(--text-secondary);
       margin-bottom: 14px;
       line-height: 1.5;
     }
-
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin: 14px 0;
     }
-
     .tech-tag {
-      background: #f3f4f6;
-      color: #374151;
+      background: var(--accent-light);
+      color: var(--accent);
       padding: 4px 12px;
       border-radius: 30px;
       font-size: 0.7rem;
       font-weight: 500;
     }
-
     .project-link {
       background: transparent;
-      border: 1px solid #e5e7eb;
+      border: 1px solid var(--border);
       padding: 5px 14px;
       border-radius: 30px;
       text-decoration: none;
-      color: #4b5563;
+      color: var(--text-secondary);
       font-size: 0.7rem;
       font-weight: 500;
       display: inline-flex;
@@ -329,44 +362,42 @@
       margin-right: 8px;
       margin-top: 8px;
     }
-
     .project-link:hover {
-      border-color: #2563eb;
-      color: #2563eb;
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
-    /* Education & Experience Cards */
+    /* Info Cards */
     .info-card {
-      background: #ffffff;
+      background: var(--bg-card);
       border-radius: 16px;
       padding: 24px;
       margin-bottom: 20px;
-      border: 1px solid #eef2f6;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
     }
-
+    .info-card:hover {
+      border-color: var(--accent);
+    }
     .info-title {
       font-size: 1rem;
       font-weight: 600;
       margin-bottom: 4px;
-      color: #111827;
     }
-
     .info-sub {
       font-size: 0.8rem;
-      color: #2563eb;
+      color: var(--accent);
       font-weight: 500;
       margin-bottom: 4px;
     }
-
     .info-date {
       font-size: 0.7rem;
-      color: #9ca3af;
+      color: var(--text-muted);
       margin-bottom: 12px;
     }
-
     .info-desc {
       font-size: 0.85rem;
-      color: #4b5563;
+      color: var(--text-secondary);
       line-height: 1.5;
     }
 
@@ -376,35 +407,29 @@
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 14px;
     }
-
     .cert-item {
-      background: #ffffff;
-      border: 1px solid #eef2f6;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 14px 16px;
       transition: all 0.2s;
     }
-
     .cert-item:hover {
-      border-color: #2563eb;
+      border-color: var(--accent);
     }
-
     .cert-name {
       font-weight: 600;
       font-size: 0.8rem;
       margin-bottom: 4px;
-      color: #111827;
     }
-
     .cert-issuer {
       font-size: 0.7rem;
-      color: #2563eb;
+      color: var(--accent);
       margin-bottom: 4px;
     }
-
     .cert-date {
       font-size: 0.65rem;
-      color: #9ca3af;
+      color: var(--text-muted);
     }
 
     /* Contact */
@@ -415,14 +440,13 @@
       gap: 16px;
       margin-top: 24px;
     }
-
     .contact-btn {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: 50px;
       padding: 10px 24px;
       text-decoration: none;
-      color: #4b5563;
+      color: var(--text-secondary);
       font-weight: 500;
       font-size: 0.85rem;
       display: inline-flex;
@@ -430,22 +454,20 @@
       gap: 10px;
       transition: all 0.2s;
     }
-
     .contact-btn i {
-      color: #2563eb;
+      color: var(--accent);
     }
-
     .contact-btn:hover {
-      border-color: #2563eb;
+      border-color: var(--accent);
       transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
       padding: 32px 0;
-      color: #9ca3af;
+      color: var(--text-muted);
       font-size: 0.7rem;
-      border-top: 1px solid #eef2f6;
+      border-top: 1px solid var(--border);
     }
 
     @media (max-width: 700px) {
@@ -470,7 +492,12 @@
     }
   </style>
 </head>
-<body>
+<body class="light">
+
+<div class="theme-toggle" id="themeToggle">
+  <i class="fas fa-sun theme-icon light-icon"></i>
+  <i class="fas fa-moon theme-icon dark-icon"></i>
+</div>
 
 <header>
   <div class="container">
@@ -494,7 +521,7 @@
       <div class="hero-badge">AI/ML Engineer</div>
       <h1>Karthik B K</h1>
       <div class="hero-desc">
-        Building production-grade AI solutions with 4+ years of hands-on experience in machine learning and full-stack deployment.
+        Building production-grade AI solutions with hands-on experience in machine learning, full-stack deployment, and data-driven systems.
       </div>
       <div class="btn-group">
         <a href="#projects" class="btn-primary"><i class="fas fa-code"></i> View Projects</a>
@@ -584,17 +611,18 @@
       </div>
 
       <div class="info-card">
-        <div class="info-title">B.Tech Computer Science (AI/ML)</div>
-        <div class="info-sub">PES University · SIUB Branch</div>
+        <div class="info-title">B.Tech Computer Science Engineering</div>
+        <div class="info-sub">Artificial Intelligence & Machine Learning (AIML)</div>
+        <div class="info-sub">PES University · RR Campus, Bengaluru</div>
         <div class="info-date">2022 – 2026</div>
-        <div class="info-desc">Specialization in Artificial Intelligence and Machine Learning. Final semester student.</div>
+        <div class="info-desc">Final semester student specializing in AI/ML with strong foundation in Python, Machine Learning, Data Analysis, and Full-Stack Development.</div>
       </div>
 
       <div class="info-card">
         <div class="info-title">Technical Intern</div>
         <div class="info-sub">Rakshan Earth and Space Technologies · Bengaluru</div>
         <div class="info-date">Feb 1 – May 1, 2026 (4 months)</div>
-        <div class="info-desc">Full-stack development, ML model training, and data analysis for space technology applications.</div>
+        <div class="info-desc">Full-stack development, ML model training, and data analysis for space technology applications. Worked on data preprocessing, model deployment, and web application development.</div>
         <div class="tech-stack" style="margin-top: 12px;">
           <span class="tech-tag">Full-Stack Dev</span>
           <span class="tech-tag">ML Models</span>
@@ -665,7 +693,7 @@
         <a href="https://drive.google.com/file/d/1Yb_MxSnyKSVcd_ABvw4fu8vS0d3gK5BH/view?usp=sharing" target="_blank" class="contact-btn"><i class="fas fa-file-alt"></i> Resume</a>
       </div>
       <div style="text-align: center; margin-top: 32px;">
-        <p style="color: #6b7280; font-size: 0.8rem;">Final semester · CSE (AI/ML) · PES University · Open for opportunities</p>
+        <p style="color: var(--text-muted); font-size: 0.8rem;">Final semester · B.Tech CSE (AIML) · PES University RR Campus · Open for opportunities</p>
       </div>
     </section>
   </div>
@@ -677,5 +705,17 @@
   </div>
 </footer>
 
+<script>
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  body.classList.add(savedTheme);
+  themeToggle.addEventListener('click', () => {
+    const newTheme = body.classList.contains('light') ? 'dark' : 'light';
+    body.classList.remove('light', 'dark');
+    body.classList.add(newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
 </body>
 </html>
