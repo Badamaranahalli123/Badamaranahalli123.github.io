@@ -15,10 +15,43 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #eef2f6 100%);
-      color: #1a202c;
+      transition: background-color 0.3s ease, color 0.3s ease;
       line-height: 1.5;
-      scroll-behavior: smooth;
+    }
+
+    /* Light Theme (Default) */
+    body.light {
+      --bg-primary: #f5f7fa;
+      --bg-secondary: #ffffff;
+      --bg-card: #ffffff;
+      --text-primary: #1a202c;
+      --text-secondary: #4a5568;
+      --text-muted: #94a3b8;
+      --border: #eef2f6;
+      --accent: #2563eb;
+      --accent-light: rgba(37, 99, 235, 0.1);
+      --header-bg: rgba(255, 255, 255, 0.95);
+      --shadow: rgba(0, 0, 0, 0.05);
+    }
+
+    /* Dark Theme */
+    body.dark {
+      --bg-primary: #0a0c10;
+      --bg-secondary: #111827;
+      --bg-card: #1a202c;
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #6b7280;
+      --border: #1f2a3e;
+      --accent: #60a5fa;
+      --accent-light: rgba(96, 165, 250, 0.15);
+      --header-bg: rgba(17, 24, 39, 0.95);
+      --shadow: rgba(0, 0, 0, 0.2);
+    }
+
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
     }
 
     .container {
@@ -27,11 +60,45 @@
       padding: 0 32px;
     }
 
+    /* Theme Toggle - iPhone Style */
+    .theme-toggle {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 1000;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 10px 18px;
+      display: flex;
+      gap: 12px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.05);
+    }
+
+    .theme-icon {
+      font-size: 1.1rem;
+      transition: all 0.2s ease;
+    }
+
+    .theme-icon.active {
+      color: var(--accent);
+    }
+
+    body.light .theme-icon.light-icon { color: var(--accent); }
+    body.dark .theme-icon.dark-icon { color: var(--accent); }
+
     /* Header */
     header {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: var(--header-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -50,12 +117,12 @@
       font-size: 1.4rem;
       font-weight: 600;
       letter-spacing: -0.3px;
-      color: #1a202c;
+      color: var(--text-primary);
     }
 
     .logo span {
       font-weight: 700;
-      color: #2563eb;
+      color: var(--accent);
     }
 
     .nav-links {
@@ -67,20 +134,20 @@
     .nav-links a {
       text-decoration: none;
       font-weight: 500;
-      color: #4a5568;
+      color: var(--text-secondary);
       transition: color 0.2s ease;
       font-size: 0.9rem;
     }
 
     .nav-links a:hover {
-      color: #2563eb;
+      color: var(--accent);
     }
 
-    /* Hero Section with fade-in */
+    /* Hero */
     .hero {
       padding: 100px 0 80px;
       text-align: center;
-      animation: fadeInUp 0.8s ease-out;
+      animation: fadeInUp 0.6s ease-out;
     }
 
     @keyframes fadeInUp {
@@ -96,13 +163,12 @@
 
     .hero-badge {
       display: inline-block;
-      background: rgba(37, 99, 235, 0.1);
-      color: #2563eb;
+      background: var(--accent-light);
+      color: var(--accent);
       padding: 6px 16px;
       border-radius: 40px;
       font-size: 0.75rem;
       font-weight: 500;
-      letter-spacing: 0.3px;
       margin-bottom: 24px;
     }
 
@@ -110,38 +176,37 @@
       font-size: 3.2rem;
       font-weight: 700;
       letter-spacing: -1px;
-      color: #1a202c;
+      color: var(--text-primary);
       margin-bottom: 20px;
     }
 
     .hero-highlight {
-      color: #2563eb;
+      color: var(--accent);
       position: relative;
       display: inline-block;
     }
 
-    .hero-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 8px;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background: rgba(37, 99, 235, 0.15);
-      z-index: -1;
-    }
-
     .hero-desc {
       font-size: 1.05rem;
-      color: #4a5568;
+      color: var(--text-secondary);
       max-width: 620px;
       margin: 0 auto 32px;
-      line-height: 1.6;
+    }
+
+    .availability-badge {
+      display: inline-block;
+      background: rgba(34, 197, 94, 0.15);
+      color: #22c55e;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-top: 16px;
     }
 
     /* Buttons */
     .btn-primary {
-      background: #1a202c;
+      background: var(--accent);
       color: white;
       padding: 12px 32px;
       border-radius: 40px;
@@ -156,15 +221,15 @@
     }
 
     .btn-primary:hover {
-      background: #2563eb;
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+      filter: brightness(1.05);
     }
 
     .btn-outline {
       background: transparent;
-      border: 1.5px solid #cbd5e1;
-      color: #334155;
+      border: 1.5px solid var(--border);
+      color: var(--text-secondary);
       padding: 11px 28px;
       border-radius: 40px;
       text-decoration: none;
@@ -177,23 +242,22 @@
     }
 
     .btn-outline:hover {
-      border-color: #2563eb;
-      color: #2563eb;
-      background: rgba(37, 99, 235, 0.04);
+      border-color: var(--accent);
+      color: var(--accent);
       transform: translateY(-2px);
     }
 
     /* Sections */
     section {
       padding: 80px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid var(--border);
     }
 
     .section-title {
       font-size: 1.8rem;
       font-weight: 600;
       margin-bottom: 48px;
-      color: #1a202c;
+      color: var(--text-primary);
       letter-spacing: -0.3px;
       position: relative;
       display: inline-block;
@@ -206,94 +270,64 @@
       left: 0;
       width: 50px;
       height: 3px;
-      background: #2563eb;
+      background: var(--accent);
       border-radius: 2px;
     }
 
-    /* Cards with hover animation */
+    /* Cards */
     .card {
-      background: #ffffff;
+      background: var(--bg-card);
       border-radius: 20px;
       padding: 32px;
       margin-bottom: 28px;
-      border: 1px solid #eef2f6;
+      border: 1px solid var(--border);
       transition: all 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
     }
 
     .card:hover {
       transform: translateY(-4px);
-      border-color: #d1dbe8;
-      box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 20px 30px -15px var(--shadow);
     }
 
     .card-title {
       font-size: 1.35rem;
       font-weight: 600;
       margin-bottom: 8px;
-      color: #1a202c;
+      color: var(--text-primary);
     }
 
     .card-sub {
-      color: #2563eb;
+      color: var(--accent);
       font-weight: 500;
       font-size: 0.85rem;
       margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
     }
 
     .card-date {
       font-size: 0.75rem;
-      color: #94a3b8;
+      color: var(--text-muted);
       margin-bottom: 16px;
-      letter-spacing: 0.2px;
-    }
-
-    .feature-list {
-      margin: 18px 0;
-      padding-left: 20px;
-    }
-
-    .feature-list li {
-      margin: 10px 0;
-      color: #4a5568;
-      font-size: 0.88rem;
     }
 
     .skill-tag {
-      background: #f1f5f9;
+      background: var(--accent-light);
       padding: 5px 14px;
       border-radius: 30px;
       font-size: 0.72rem;
       font-weight: 500;
-      color: #334155;
+      color: var(--accent);
       display: inline-block;
       margin-right: 8px;
       margin-bottom: 8px;
       transition: all 0.2s ease;
     }
 
-    .skill-tag:hover {
-      background: #2563eb;
-      color: white;
-    }
-
-    .project-links {
-      margin-top: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
     .project-link {
-      background: #f1f5f9;
+      background: var(--accent-light);
       padding: 8px 18px;
       border-radius: 30px;
       text-decoration: none;
-      color: #334155;
+      color: var(--accent);
       font-size: 0.8rem;
       font-weight: 500;
       display: inline-flex;
@@ -303,11 +337,50 @@
     }
 
     .project-link:hover {
-      background: #2563eb;
+      background: var(--accent);
       color: white;
     }
 
-    /* Contact Section - Minimal, No Phone */
+    /* Certifications Grid */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      transition: all 0.25s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .cert-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+
+    .cert-card .issuer {
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .cert-card .date {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact */
     .contact-grid {
       display: flex;
       flex-wrap: wrap;
@@ -317,69 +390,54 @@
     }
 
     .contact-card {
-      background: #ffffff;
-      border: 1px solid #eef2f6;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
       border-radius: 50px;
       padding: 12px 28px;
       text-decoration: none;
-      color: #334155;
+      color: var(--text-secondary);
       font-weight: 500;
       font-size: 0.9rem;
       display: inline-flex;
       align-items: center;
       gap: 12px;
       transition: all 0.25s ease;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
     }
 
     .contact-card i {
-      font-size: 1rem;
-      color: #2563eb;
+      color: var(--accent);
     }
 
     .contact-card:hover {
-      border-color: #2563eb;
-      background: #f8fafc;
+      border-color: var(--accent);
       transform: translateY(-2px);
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 48px 0;
-      color: #94a3b8;
+      color: var(--text-muted);
       font-size: 0.75rem;
-      background: transparent;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid var(--border);
     }
 
     @media (max-width: 700px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      nav {
-        flex-direction: column;
-      }
-      .nav-links {
-        gap: 28px;
-      }
-      .section-title {
-        font-size: 1.4rem;
-      }
-      .card {
-        padding: 24px;
-      }
-      .contact-grid {
-        gap: 14px;
-      }
-      .contact-card {
-        padding: 10px 20px;
-        font-size: 0.8rem;
-      }
+      .hero h1 { font-size: 2rem; }
+      nav { flex-direction: column; }
+      .nav-links { gap: 28px; }
+      .section-title { font-size: 1.4rem; }
+      .card { padding: 24px; }
+      .certs-grid { grid-template-columns: 1fr; }
+      .theme-toggle { bottom: 20px; right: 20px; padding: 8px 14px; }
     }
   </style>
 </head>
-<body>
+<body class="light">
+
+<div class="theme-toggle" id="themeToggle">
+  <i class="fas fa-sun theme-icon light-icon"></i>
+  <i class="fas fa-moon theme-icon dark-icon"></i>
+</div>
 
 <header>
   <div class="container">
@@ -388,6 +446,7 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -397,38 +456,33 @@
 
 <main>
   <div class="container">
-    <!-- Hero -->
     <section id="home" class="hero">
-      <div class="hero-badge">
-        B.Tech CSE · Artificial Intelligence & Machine Learning
-      </div>
+      <div class="hero-badge">B.Tech CSE · Artificial Intelligence & Machine Learning · PESIT</div>
       <h1>Building <span class="hero-highlight">AI</span> That Delivers Results</h1>
       <div class="hero-desc">
-        AI/ML Engineer specializing in predictive analytics, full-stack ML deployment, and production-grade solutions. Turning complex problems into intelligent systems.
+        AI/ML Engineer specializing in predictive analytics, full-stack ML deployment, and production-grade solutions.
       </div>
       <div>
-        <a href="#projects" class="btn-primary">
-          <i class="fas fa-arrow-down" style="font-size: 0.8rem;"></i> View Work
-        </a>
-        <a href="#contact" class="btn-outline" style="margin-left: 14px;">
-          <i class="fas fa-paper-plane" style="font-size: 0.8rem;"></i> Connect
-        </a>
+        <a href="#projects" class="btn-primary"><i class="fas fa-arrow-down"></i> View Work</a>
+        <a href="#contact" class="btn-outline" style="margin-left: 14px;"><i class="fas fa-paper-plane"></i> Connect</a>
+      </div>
+      <div class="availability-badge">
+        <i class="fas fa-briefcase"></i> Open for Internship | Internship with PPO
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects Section -->
     <section id="projects">
       <h2 class="section-title">Projects</h2>
 
       <div class="card">
         <div class="card-title">Employee Burnout Analysis</div>
         <div class="card-sub">Solo · Machine Learning Dashboard</div>
-        <div class="card-date">January 2026 – March 2026</div>
-        <p>Predictive ML system analyzing employee burnout risk using psychological and work pattern data. Built with Python, scikit-learn, and deployed on Streamlit.</p>
+        <div class="card-date">Jan 2026 – Mar 2026</div>
+        <p>Predictive ML system analyzing employee burnout risk using psychological and work pattern data.</p>
         <div class="skill-tag">Python</div>
         <div class="skill-tag">Scikit-learn</div>
         <div class="skill-tag">Streamlit</div>
-        <div class="skill-tag">Pandas</div>
         <div class="project-links">
           <a href="https://employee-engagement-burnout-analysis-fuk6jviq6k8dh8n9jcrjap.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
         </div>
@@ -437,11 +491,10 @@
       <div class="card">
         <div class="card-title">Predictive Maintenance · 6G Anomaly Detection</div>
         <div class="card-sub">Solo · Industrial AI</div>
-        <div class="card-date">October 2025 – Present</div>
-        <p>Anomaly detection system for predictive maintenance in next-gen networks. Uses isolation forests and autoencoders to flag equipment failures before they occur.</p>
+        <div class="card-date">Oct 2025 – Present</div>
+        <p>Anomaly detection system using isolation forests and autoencoders to flag equipment failures.</p>
         <div class="skill-tag">Anomaly Detection</div>
         <div class="skill-tag">Autoencoders</div>
-        <div class="skill-tag">Python</div>
         <div class="project-links">
           <a href="https://predictive-maintenance-6g-anomaly-detection.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-chart-line"></i> Live Demo</a>
         </div>
@@ -451,10 +504,9 @@
         <div class="card-title">SunnyAI · Intelligent Assistant</div>
         <div class="card-sub">Solo · LLM Chat Interface</div>
         <div class="card-date">2025 – 2026</div>
-        <p>Conversational AI assistant with context-aware responses. Built using open-source LLMs and deployed on Streamlit cloud.</p>
+        <p>Conversational AI assistant with context-aware responses using open-source LLMs.</p>
         <div class="skill-tag">LLM</div>
         <div class="skill-tag">Streamlit</div>
-        <div class="skill-tag">Python</div>
         <div class="project-links">
           <a href="https://sunnyai-karthikbk.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-comment"></i> Try Demo</a>
         </div>
@@ -463,39 +515,45 @@
       <div class="card">
         <div class="card-title">Stock Analyzer for Beginners</div>
         <div class="card-sub">Solo · Full-Stack Web Application</div>
-        <div class="card-date">April 2025 – Present · Security Layer in Progress</div>
-        <p>Complete investment platform for beginner investors with authentication, real-time analysis, and market insights.</p>
-        <ul class="feature-list">
-          <li>Secure authentication with welcome email automation</li>
-          <li>Market sentiment indicators with visual feedback</li>
-          <li>Country-based market closure detection</li>
-          <li>Investment recommendations and return projections (1D, 1W, 1M, 1Y)</li>
-          <li>Interactive stock charts with 30-day moving average</li>
-          <li>User data protection layer being actively implemented</li>
-        </ul>
+        <div class="card-date">Apr 2025 – Present · Security Layer in Progress</div>
+        <p>Complete investment platform with authentication, real-time analysis, and market insights.</p>
         <div class="skill-tag">Python/Flask</div>
         <div class="skill-tag">JWT</div>
         <div class="skill-tag">PostgreSQL</div>
-        <div class="skill-tag">Yahoo Finance API</div>
-        <div class="skill-tag">SMTP</div>
         <div class="project-links">
           <a href="https://drive.google.com/file/d/1EUKmjOkv4Dw7kefl4ztw4h4dgEsQRUfY/view?usp=sharing" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i> Documentation</a>
-          <a href="#" class="project-link" id="live-demo-placeholder"><i class="fas fa-globe"></i> Live Demo (Upcoming)</a>
-        </div>
-        <div style="margin-top: 14px; font-size: 0.7rem; color: #94a3b8;">
-          Security implementation in progress — public deployment following completion
         </div>
       </div>
 
       <div class="card">
         <div class="card-title">Advanced Stock Analyzer</div>
         <div class="card-sub">Group Project · Technical Lead</div>
-        <div class="card-date">September 2025 – February 2026</div>
-        <p>Collaborative platform for experienced investors featuring technical indicators, backtesting engine, and market sentiment analysis. Led ML pipeline and API integration.</p>
+        <div class="card-date">Sep 2025 – Feb 2026</div>
+        <p>Technical indicators, backtesting engine, and sentiment analysis for experienced investors.</p>
         <div class="skill-tag">Technical Analysis</div>
         <div class="skill-tag">Backtesting</div>
         <div class="skill-tag">FastAPI</div>
-        <div class="skill-tag">Sentiment Analysis</div>
+      </div>
+    </section>
+
+    <!-- Certifications Section - All your credentials -->
+    <section id="certifications">
+      <h2 class="section-title">Licenses & Certifications</h2>
+      <div class="certs-grid">
+        <div class="cert-card"><h4>International Online Olympiad</h4><div class="issuer">Galvanize Global Education</div><div class="date">Feb 2026</div></div>
+        <div class="cert-card"><h4>Kruu Grasp 2026 Hackathon</h4><div class="issuer">Kruu</div><div class="date">Feb 2026</div></div>
+        <div class="cert-card"><h4>Artificial Intelligence Intern</h4><div class="issuer">Codec Technologies India</div><div class="date">Feb 2026</div></div>
+        <div class="cert-card"><h4>Data Fundamentals</h4><div class="issuer">IBM</div><div class="date">Nov 2025</div></div>
+        <div class="cert-card"><h4>Get Started Building with Power BI</h4><div class="issuer">Microsoft</div><div class="date">Nov 2025</div></div>
+        <div class="cert-card"><h4>Data Analysis</h4><div class="issuer">Microsoft</div><div class="date">Nov 2025</div></div>
+        <div class="cert-card"><h4>Introduction to GenAI and Agents</h4><div class="issuer">Microsoft</div><div class="date">Nov 2025</div></div>
+        <div class="cert-card"><h4>Amazon Q Developer Getting Started</h4><div class="issuer">AWS</div><div class="date">Nov 2025</div></div>
+        <div class="cert-card"><h4>Amazon Q Introduction</h4><div class="issuer">AWS</div><div class="date">Nov 2025</div></div>
+        <div class="cert-card"><h4>5 Days GenAI Course</h4><div class="issuer">Kaggle</div><div class="date">Apr 2025</div></div>
+        <div class="cert-card"><h4>AWS Services and Fundamentals</h4><div class="issuer">Simplilearn</div><div class="date">Mar 2025</div></div>
+        <div class="cert-card"><h4>Agnirva Internship Program</h4><div class="issuer">Agnirva Learning Network</div><div class="date">Mar 2025</div></div>
+        <div class="cert-card"><h4>Facilities Management</h4><div class="issuer">Alison</div><div class="date">Mar 2025</div></div>
+        <div class="cert-card"><h4>Databases</h4><div class="issuer">Naukri.com</div><div class="date">Mar 2025</div></div>
       </div>
     </section>
 
@@ -516,38 +574,31 @@
           <span class="skill-tag">Streamlit</span>
           <span class="skill-tag">Power BI</span>
           <span class="skill-tag">FastAPI</span>
-          <span class="skill-tag">JWT Authentication</span>
+          <span class="skill-tag">JWT</span>
           <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">LLM</span>
         </div>
       </div>
 
-      <div class="card" style="margin-top: 20px;">
+      <div class="card">
         <div class="card-title" style="font-size: 1.1rem; margin-bottom: 16px;">Experience</div>
         <p><strong>Technical Intern</strong> · Rakshan Earth and Space Technologies</p>
-        <p style="color: #4a5568; font-size: 0.85rem; margin-top: 6px;">2022 – 2026 · Bengaluru</p>
-        <p style="margin-top: 12px; color: #4a5568; font-size: 0.9rem;">Full-stack development, ML model training, and data analysis for space technology applications.</p>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">2022 – 2026 · Bengaluru</p>
+        <p style="margin-top: 12px; font-size: 0.9rem;">Full-stack development, ML model training, and data analysis for space technology applications.</p>
       </div>
     </section>
 
-    <!-- Contact - No phone, no emojis, professional -->
+    <!-- Contact -->
     <section id="contact">
       <h2 class="section-title">Connect</h2>
       <div class="contact-grid">
-        <a href="mailto:karthikabk2020@gmail.com" class="contact-card">
-          <i class="fas fa-envelope"></i> Email
-        </a>
-        <a href="https://github.com/Badamaranahalli123" target="_blank" class="contact-card">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/karthik-bk-b5a285964/" target="_blank" class="contact-card">
-          <i class="fab fa-linkedin-in"></i> LinkedIn
-        </a>
-        <a href="https://drive.google.com/file/d/1Yb_MxSnyKSVcd_ABvw4fu8vS0d3gK5BH/view?usp=sharing" target="_blank" class="contact-card">
-          <i class="fas fa-file-alt"></i> Resume
-        </a>
+        <a href="mailto:karthikabk2020@gmail.com" class="contact-card"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://github.com/Badamaranahalli123" target="_blank" class="contact-card"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/karthik-bk-b5a964285/" target="_blank" class="contact-card"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <a href="https://drive.google.com/file/d/1Yb_MxSnyKSVcd_ABvw4fu8vS0d3gK5BH/view?usp=sharing" target="_blank" class="contact-card"><i class="fas fa-file-alt"></i> Resume</a>
       </div>
       <div style="text-align: center; margin-top: 48px;">
-        <p style="color: #4a5568; font-size: 0.9rem;">Open for AI/ML internships and full-time opportunities.</p>
+        <p style="color: var(--text-secondary);">Final semester student at PESIT · Open for internships and full-time opportunities</p>
       </div>
     </section>
   </div>
@@ -560,9 +611,22 @@
 </footer>
 
 <script>
-  document.getElementById('live-demo-placeholder')?.addEventListener('click', function(e) {
-    e.preventDefault();
-    alert("Public deployment pending security implementation. Documentation available now.");
+  // Theme Toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  function setTheme(theme) {
+    body.classList.remove('light', 'dark');
+    body.classList.add(theme);
+    localStorage.setItem('theme', theme);
+  }
+
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  setTheme(savedTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const newTheme = body.classList.contains('light') ? 'dark' : 'light';
+    setTheme(newTheme);
   });
 </script>
 
