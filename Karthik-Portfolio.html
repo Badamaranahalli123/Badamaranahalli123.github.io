@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karthik B K | AI/ML Engineer | Full-Stack AI Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <title>Karthik B K | AI/ML Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -15,27 +15,21 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #0a0c10;
-      color: #eef2ff;
+      background: #f9fafb;
+      color: #111827;
       line-height: 1.5;
     }
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 28px;
+      padding: 0 32px;
     }
 
-    .gradient-bg {
-      background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.15), rgba(0, 0, 0, 0.95)), 
-                  linear-gradient(135deg, #0a0c10 0%, #111827 100%);
-      min-height: 100vh;
-    }
-
+    /* Clean White Header */
     header {
-      background: rgba(10, 12, 16, 0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+      background: #ffffff;
+      border-bottom: 1px solid #eef2f6;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -51,89 +45,102 @@
     }
 
     .logo {
-      font-size: 1.6rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #60a5fa, #a855f7);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: #111827;
+    }
+
+    .logo span {
+      color: #2563eb;
     }
 
     .nav-links {
       display: flex;
-      gap: 32px;
+      gap: 40px;
       list-style: none;
     }
 
     .nav-links a {
       text-decoration: none;
       font-weight: 500;
-      color: #cbd5e1;
+      color: #4b5563;
       transition: 0.2s;
+      font-size: 0.95rem;
     }
 
     .nav-links a:hover {
-      color: #60a5fa;
+      color: #2563eb;
     }
 
+    /* Hero Section */
     .hero {
-      padding: 100px 0 80px;
+      padding: 96px 0 80px;
       text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #ffffff, #93c5fd, #c084fc);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 20px;
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
     }
 
     .hero-badge {
       display: inline-block;
-      background: rgba(59, 130, 246, 0.2);
-      border: 1px solid rgba(59, 130, 246, 0.4);
-      padding: 6px 18px;
+      background: #eef2ff;
+      color: #2563eb;
+      padding: 4px 14px;
       border-radius: 40px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 500;
       margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .hero-desc {
       font-size: 1.1rem;
-      color: #94a3b8;
-      max-width: 700px;
+      color: #6b7280;
+      max-width: 650px;
       margin: 0 auto 32px;
     }
 
+    /* Buttons */
     .btn-primary {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      background: #111827;
       color: white;
       padding: 12px 32px;
       border-radius: 40px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       display: inline-flex;
       align-items: center;
       gap: 10px;
       transition: 0.2s;
+      border: none;
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+      background: #1f2937;
+      transform: translateY(-2px);
     }
 
     .btn-outline {
       background: transparent;
-      border: 1.5px solid #3b82f6;
-      color: #93c5fd;
+      border: 1.5px solid #e5e7eb;
+      color: #374151;
       padding: 11px 28px;
       border-radius: 40px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -141,50 +148,51 @@
     }
 
     .btn-outline:hover {
-      background: rgba(59, 130, 246, 0.1);
+      border-color: #2563eb;
+      background: #f8fafc;
     }
 
+    /* Sections */
     section {
-      padding: 70px 0;
-      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+      padding: 80px 0;
+      border-bottom: 1px solid #eef2f6;
     }
 
     .section-title {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 700;
       margin-bottom: 48px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      color: #111827;
+      letter-spacing: -0.3px;
     }
 
-    .section-title i {
-      color: #3b82f6;
-    }
-
+    /* Cards - Clean & Professional */
     .card {
-      background: #111827;
-      border-radius: 24px;
-      padding: 28px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 32px;
       margin-bottom: 28px;
-      border: 1px solid #1f2a3e;
-      transition: 0.25s;
+      border: 1px solid #eef2f6;
+      transition: 0.2s;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
 
     .card:hover {
-      border-color: #3b82f6;
-      transform: translateY(-4px);
+      border-color: #d1dbe8;
+      box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.08);
     }
 
     .card-title {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 8px;
+      color: #111827;
     }
 
     .card-sub {
-      color: #60a5fa;
+      color: #2563eb;
       font-weight: 500;
+      font-size: 0.9rem;
       margin-bottom: 12px;
       display: flex;
       align-items: center;
@@ -194,45 +202,46 @@
 
     .card-date {
       font-size: 0.8rem;
-      color: #6b7280;
+      color: #9ca3af;
       margin-bottom: 16px;
     }
 
     .feature-list {
-      margin: 16px 0;
+      margin: 18px 0;
       padding-left: 20px;
     }
 
     .feature-list li {
-      margin: 8px 0;
-      color: #cbd5e1;
+      margin: 10px 0;
+      color: #4b5563;
+      font-size: 0.9rem;
     }
 
     .skill-tag {
-      background: #1e293b;
+      background: #f3f4f6;
       padding: 5px 14px;
       border-radius: 30px;
       font-size: 0.75rem;
       font-weight: 500;
-      color: #93c5fd;
+      color: #374151;
       display: inline-block;
       margin-right: 8px;
       margin-bottom: 8px;
     }
 
     .project-links {
-      margin-top: 20px;
+      margin-top: 24px;
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
     }
 
     .project-link {
-      background: #1e293b;
+      background: #f3f4f6;
       padding: 8px 18px;
       border-radius: 30px;
       text-decoration: none;
-      color: #cbd5e1;
+      color: #1f2937;
       font-size: 0.85rem;
       font-weight: 500;
       display: inline-flex;
@@ -246,60 +255,75 @@
       color: white;
     }
 
+    /* Contact Section - Clean */
     .contact-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
       margin-top: 32px;
     }
 
     .contact-card {
-      background: #111827;
-      border: 1px solid #2d3a4e;
+      background: #ffffff;
+      border: 1px solid #eef2f6;
       border-radius: 60px;
-      padding: 12px 28px;
+      padding: 14px 32px;
       text-decoration: none;
-      color: #e2e8f0;
+      color: #374151;
       font-weight: 500;
       display: inline-flex;
       align-items: center;
       gap: 12px;
       transition: 0.2s;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    }
+
+    .contact-card i {
+      font-size: 1.1rem;
+      color: #2563eb;
     }
 
     .contact-card:hover {
-      border-color: #3b82f6;
-      background: #1e293b;
+      border-color: #2563eb;
+      background: #f8fafc;
       transform: translateY(-2px);
     }
 
+    /* Footer */
     footer {
       text-align: center;
-      padding: 40px 0;
-      color: #6b7280;
+      padding: 48px 0;
+      color: #9ca3af;
       font-size: 0.8rem;
+      background: #ffffff;
     }
 
     @media (max-width: 700px) {
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
       nav {
         flex-direction: column;
       }
+      .nav-links {
+        gap: 24px;
+      }
       .section-title {
         font-size: 1.5rem;
+      }
+      .card {
+        padding: 24px;
       }
     }
   </style>
 </head>
-<body class="gradient-bg">
+<body>
 
 <header>
   <div class="container">
     <nav>
-      <div class="logo">KARTHIK B K</div>
+      <div class="logo">Karthik <span>BK</span></div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -312,146 +336,152 @@
 
 <main>
   <div class="container">
+    <!-- Hero -->
     <section id="home" class="hero">
       <div class="hero-badge">
-        <i class="fas fa-graduation-cap"></i> B.Tech CSE (AI/ML) @ PESIT
+        <i class="fas fa-graduation-cap"></i> B.Tech CSE (AI/ML) · PESIT
       </div>
-      <h1>Building AI That <span style="background: linear-gradient(135deg,#60a5fa,#c084fc); -webkit-background-clip:text; background-clip:text; color:transparent;">Actually Works</span></h1>
+      <h1>Building AI That <span class="hero-highlight">Actually Works</span></h1>
       <div class="hero-desc">
-        AI/ML Engineer with hands-on experience in predictive analytics, full-stack ML deployment, and data-driven solutions. I turn complex problems into production-ready AI.
+        AI/ML Engineer focused on predictive analytics, full-stack ML deployment, and production-ready AI solutions.
       </div>
       <div>
-        <a href="#projects" class="btn-primary"><i class="fas fa-arrow-down"></i> See My Work</a>
-        <a href="#contact" class="btn-outline" style="margin-left: 16px;"><i class="fas fa-comment"></i> Contact Me</a>
+        <a href="#projects" class="btn-primary"><i class="fas fa-arrow-down"></i> View Projects</a>
+        <a href="#contact" class="btn-outline" style="margin-left: 14px;"><i class="fas fa-comment"></i> Get in Touch</a>
       </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
-      <h2 class="section-title"><i class="fas fa-code-branch"></i> Live Projects</h2>
+      <h2 class="section-title">Featured Work</h2>
 
+      <!-- Project 1 -->
       <div class="card">
-        <div class="card-title">🔥 Employee Burnout & Engagement Analysis</div>
-        <div class="card-sub"><i class="fas fa-chart-line"></i> Solo Project · ML + Dashboard</div>
+        <div class="card-title">Employee Burnout Analysis</div>
+        <div class="card-sub"><i class="fas fa-chart-line"></i> Solo · ML Dashboard</div>
         <div class="card-date">Jan 2026 – Mar 2026</div>
-        <p>End-to-end ML system that predicts employee burnout risk using psychological & work pattern data. Built with Python, scikit-learn, and deployed as interactive Streamlit app.</p>
+        <p>End-to-end ML system predicting burnout risk using psychological & work pattern data. Built with Python, scikit-learn, deployed via Streamlit.</p>
         <div class="skill-tag">Python</div>
         <div class="skill-tag">Scikit-learn</div>
         <div class="skill-tag">Streamlit</div>
         <div class="project-links">
-          <a href="https://employee-engagement-burnout-analysis-fuk6jviq6k8dh8n9jcrjap.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo →</a>
+          <a href="https://employee-engagement-burnout-analysis-fuk6jviq6k8dh8n9jcrjap.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
 
+      <!-- Project 2 -->
       <div class="card">
-        <div class="card-title">⚙️ Predictive Maintenance · 6G Anomaly Detection</div>
-        <div class="card-sub"><i class="fas fa-microchip"></i> AI for Industrial IoT</div>
+        <div class="card-title">Predictive Maintenance · 6G Anomaly Detection</div>
+        <div class="card-sub"><i class="fas fa-microchip"></i> Solo · Industrial AI</div>
         <div class="card-date">Oct 2025 – Present</div>
-        <p>Anomaly detection system for predictive maintenance in next-gen networks. Uses isolation forests & autoencoders to flag equipment failures before they happen.</p>
+        <p>Anomaly detection system for predictive maintenance using isolation forests & autoencoders. Flags equipment failures before they happen.</p>
         <div class="skill-tag">Anomaly Detection</div>
         <div class="skill-tag">Autoencoders</div>
+        <div class="skill-tag">Python</div>
         <div class="project-links">
-          <a href="https://predictive-maintenance-6g-anomaly-detection.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-chart-simple"></i> Live App →</a>
+          <a href="https://predictive-maintenance-6g-anomaly-detection.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-chart-simple"></i> Live Demo</a>
         </div>
       </div>
 
+      <!-- Project 3 -->
       <div class="card">
-        <div class="card-title">☀️ SunnyAI · Intelligent Assistant</div>
-        <div class="card-sub"><i class="fas fa-robot"></i> LLM-based Chat Interface</div>
+        <div class="card-title">SunnyAI · Intelligent Assistant</div>
+        <div class="card-sub"><i class="fas fa-robot"></i> Solo · LLM Chatbot</div>
         <div class="card-date">2025 – 2026</div>
-        <p>Conversational AI assistant built with open-source LLMs. Features context-aware responses and multi-turn dialogue. Deployed on Streamlit cloud.</p>
+        <p>Conversational AI assistant with context-aware responses. Built with open-source LLMs and deployed on Streamlit cloud.</p>
         <div class="skill-tag">LLM</div>
         <div class="skill-tag">Streamlit</div>
-        <div class="project-links">
-          <a href="https://sunnyai-karthikbk.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-comment-dots"></i> Try SunnyAI →</a>
-        </div>
-      </div>
-
-      <!-- Stock Analyzer for Beginners - Detailed with all features -->
-      <div class="card">
-        <div class="card-title">📈 Stock Analyzer for Beginners <span style="background:#2563eb20; padding:2px 10px; border-radius:40px; font-size:0.7rem; margin-left:10px;">Full-Stack Web App</span></div>
-        <div class="card-sub"><i class="fas fa-chart-simple"></i> Solo Project · Authentication + Real-time Stock Analysis</div>
-        <div class="card-date">Apr 2025 – Present · Actively handling user data with security layer</div>
-        <p><strong>Complete investment platform for beginner investors.</strong> Built with full authentication, email automation, and real-time market analysis.</p>
-        
-        <ul class="feature-list">
-          <li>✅ <strong>Signup/Login</strong> with welcome email automation</li>
-          <li>✅ <strong>Bull/Bear visual indicators</strong> — Bull GIF for bullish stocks, Bear GIF for bearish</li>
-          <li>✅ <strong>User Profile</strong> — Update real investment amount</li>
-          <li>✅ <strong>Market status detection</strong> — Shows "Market Closed" based on user's country</li>
-          <li>✅ <strong>Buy/Safe recommendations</strong> — Tells user if stock is good to buy or safe to invest</li>
-          <li>✅ <strong>Return predictions</strong> — 1 Day, 1 Week, 1 Month, 1 Year projections</li>
-          <li>✅ <strong>Stock charts</strong> + <strong>30-day average</strong> visualization</li>
-          <li>✅ <strong>Delete/Logout functionality</strong> — Full user control</li>
-          <li>✅ <strong>User data security layer</strong> — Actively being added</li>
-        </ul>
-
         <div class="skill-tag">Python</div>
-        <div class="skill-tag">Flask/FastAPI</div>
-        <div class="skill-tag">Yahoo Finance API</div>
-        <div class="skill-tag">JWT Auth</div>
-        <div class="skill-tag">Email SMTP</div>
-        <div class="skill-tag">PostgreSQL</div>
-        <div class="skill-tag">HTML/CSS/JS</div>
-        
         <div class="project-links">
-          <a href="https://drive.google.com/file/d/1EUKmjOkv4Dw7kefl4ztw4h4dgEsQRUfY/view?usp=sharing" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i> 📄 Project Documentation (PDF)</a>
-          <a href="#" class="project-link" id="live-demo-placeholder"><i class="fas fa-globe"></i> Live Demo (Coming Soon)</a>
+          <a href="https://sunnyai-karthikbk.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-comment-dots"></i> Try SunnyAI</a>
         </div>
-        <small style="display:block; margin-top:12px; color:#6b7280;">🔒 Adding security layer before public deployment. Documentation PDF available now.</small>
       </div>
 
-      <!-- Advanced Stock Analyzer - Group Project -->
+      <!-- Project 4: Stock Analyzer for Beginners (Main) -->
       <div class="card">
-        <div class="card-title">📊 Advanced Stock Analyzer <span style="background:#7c3aed20; padding:2px 10px; border-radius:40px; font-size:0.7rem; margin-left:10px;">Group Project</span></div>
-        <div class="card-sub"><i class="fas fa-users"></i> Team of 4 · Technical Lead (ML Pipeline)</div>
+        <div class="card-title">Stock Analyzer for Beginners <span style="background:#eef2ff; padding:2px 12px; border-radius:40px; font-size:0.7rem; margin-left:10px;">Full-Stack</span></div>
+        <div class="card-sub"><i class="fas fa-chart-simple"></i> Solo · Authentication + Real-time Analysis</div>
+        <div class="card-date">Apr 2025 – Present · Adding security layer</div>
+        <p>Complete investment platform for beginners. Built with full authentication, email automation, and real-time market data.</p>
+        <ul class="feature-list">
+          <li>✓ Signup/Login with welcome email automation</li>
+          <li>✓ Bull/Bear visual indicators with GIFs</li>
+          <li>✓ Market status detection (shows "Market Closed" based on country)</li>
+          <li>✓ Buy/Safe recommendations & return predictions (1D, 1W, 1M, 1Y)</li>
+          <li>✓ Stock charts with 30-day average visualization</li>
+          <li>✓ User data security layer (actively implementing)</li>
+        </ul>
+        <div class="skill-tag">Python/Flask</div>
+        <div class="skill-tag">JWT Auth</div>
+        <div class="skill-tag">Yahoo Finance API</div>
+        <div class="skill-tag">PostgreSQL</div>
+        <div class="skill-tag">SMTP Email</div>
+        <div class="project-links">
+          <a href="https://drive.google.com/file/d/1EUKmjOkv4Dw7kefl4ztw4h4dgEsQRUfY/view?usp=sharing" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i> Documentation</a>
+          <a href="#" class="project-link" id="live-demo-placeholder"><i class="fas fa-globe"></i> Live Demo (Soon)</a>
+        </div>
+        <small style="display:block; margin-top:14px; color:#9ca3af;">🔒 Security layer in progress — live demo available after completion</small>
+      </div>
+
+      <!-- Project 5: Group Project -->
+      <div class="card">
+        <div class="card-title">Advanced Stock Analyzer</div>
+        <div class="card-sub"><i class="fas fa-users"></i> Group Project · Technical Lead</div>
         <div class="card-date">Sep 2025 – Feb 2026</div>
-        <p>Collaborative project for experienced investors. Built technical indicators, backtesting engine, and real-time market sentiment analysis. My role: ML pipeline & API integration.</p>
+        <p>Collaborative project for experienced investors. Built technical indicators, backtesting engine, and sentiment analysis. My role: ML pipeline & API integration.</p>
         <div class="skill-tag">Technical Analysis</div>
         <div class="skill-tag">Backtesting</div>
-        <div class="skill-tag">Sentiment Analysis</div>
         <div class="skill-tag">FastAPI</div>
       </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills">
-      <h2 class="section-title"><i class="fas fa-crown"></i> Technical Arsenal</h2>
+      <h2 class="section-title">Technical Skills</h2>
       <div class="card">
         <div>
-          <span class="skill-tag">🐍 Python</span>
-          <span class="skill-tag">☕ Java</span>
-          <span class="skill-tag">🌐 JavaScript</span>
-          <span class="skill-tag">📊 Power BI</span>
-          <span class="skill-tag">🗄️ MongoDB</span>
-          <span class="skill-tag">🐘 PostgreSQL</span>
-          <span class="skill-tag">🐙 Git/GitHub</span>
-          <span class="skill-tag">☁️ AWS</span>
-          <span class="skill-tag">🤖 Machine Learning</span>
-          <span class="skill-tag">📈 Data Analysis</span>
-          <span class="skill-tag">⚡ Streamlit</span>
-          <span class="skill-tag">🧠 LLMs</span>
-          <span class="skill-tag">🔐 JWT Auth</span>
-          <span class="skill-tag">📧 SMTP/Email</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">JWT Auth</span>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-title" style="font-size:1.2rem;"><i class="fas fa-briefcase"></i> Experience</div>
-        <p><strong>Technical Intern @ Rakshan Earth and Space Technologies</strong> (2022–2026)<br>Full-stack development, ML model training, data analysis for space-tech applications.</p>
-        <p style="margin-top: 16px;"><strong>AI/ML Research</strong> · Multiple academic & personal projects deployed live.</p>
+      <div class="card" style="margin-top: 20px;">
+        <div class="card-title" style="font-size:1.1rem; margin-bottom:16px;">Experience</div>
+        <p><strong>Technical Intern</strong> @ Rakshan Earth and Space Technologies (2022–2026)</p>
+        <p style="color:#6b7280; font-size:0.9rem; margin-top:8px;">Full-stack development, ML model training, data analysis for space-tech applications.</p>
       </div>
     </section>
 
+    <!-- Contact - Clean: Only Email, GitHub, LinkedIn, Resume PDF -->
     <section id="contact">
-      <h2 class="section-title"><i class="fas fa-paper-plane"></i> Let's Connect</h2>
+      <h2 class="section-title">Let's Connect</h2>
       <div class="contact-grid">
-        <a href="mailto:karthikabk2020@gmail.com" class="contact-card"><i class="fas fa-envelope"></i> Email</a>
-        <a href="tel:+917892298838" class="contact-card"><i class="fas fa-phone"></i> Call</a>
-        <a href="https://github.com/Badamaranahalli123" target="_blank" class="contact-card"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/karthik-bk-b5a285964/" target="_blank" class="contact-card"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://drive.google.com/file/d/1Yb_MxSnyKSVcd_ABvw4fu8vS0d3gK5BH/view?usp=sharing" target="_blank" class="contact-card"><i class="fas fa-file-alt"></i> Resume PDF</a>
+        <a href="mailto:karthikabk2020@gmail.com" class="contact-card">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://github.com/Badamaranahalli123" target="_blank" class="contact-card">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/karthik-bk-b5a285964/" target="_blank" class="contact-card">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="https://drive.google.com/file/d/1Yb_MxSnyKSVcd_ABvw4fu8vS0d3gK5BH/view?usp=sharing" target="_blank" class="contact-card">
+          <i class="fas fa-file-alt"></i> Resume
+        </a>
       </div>
       <div style="text-align: center; margin-top: 48px;">
-        <p style="color:#94a3b8;">Open for AI/ML internships & full-time roles — Let's build something impactful.</p>
+        <p style="color:#6b7280;">Open for AI/ML internships & full-time roles — Let's build something great.</p>
       </div>
     </section>
   </div>
@@ -459,14 +489,14 @@
 
 <footer>
   <div class="container">
-    <p>© 2026 Karthik B K · Built with <i class="fas fa-heart" style="color:#3b82f6;"></i> · Live on GitHub Pages</p>
+    <p>© 2026 Karthik B K — Built with care</p>
   </div>
 </footer>
 
 <script>
   document.getElementById('live-demo-placeholder')?.addEventListener('click', function(e) {
     e.preventDefault();
-    alert("🚀 Live demo coming soon! I'm currently adding security layer to protect user data. The documentation PDF is available now. Will share the live link within a week.");
+    alert("Live demo coming soon — currently adding security layer for user data protection. Documentation PDF is available now.");
   });
 </script>
 
