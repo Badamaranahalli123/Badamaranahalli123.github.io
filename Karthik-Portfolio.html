@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karthik B K | AI/ML Engineer</title>
-  <meta name="description" content="AI/ML Engineer, B.Tech CSE AIML at PES University RR Campus. Open for internships & full-time roles.">
+  <meta name="description" content="B.Tech CSE AIML at PES University RR Campus. AI/ML Engineer open for internships.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -16,23 +16,23 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      transition: background-color 0.25s ease, color 0.25s ease;
+      transition: background-color 0.3s ease, color 0.2s ease;
       line-height: 1.5;
     }
 
     /* Light Theme */
     body.light {
-      --bg-body: #f5f7fa;
+      --bg-body: #f8fafc;
       --bg-surface: #ffffff;
       --bg-card: #ffffff;
-      --text-primary: #0a0b0d;
-      --text-secondary: #4a5568;
-      --text-muted: #718096;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
       --border: #e2e8f0;
       --accent: #2563eb;
       --accent-light: #eef2ff;
-      --shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
-      --shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      --shadow-hover: 0 12px 24px -12px rgba(0, 0, 0, 0.08);
     }
 
     /* Dark Theme */
@@ -46,8 +46,8 @@
       --border: #334155;
       --accent: #60a5fa;
       --accent-light: #1e293b;
-      --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-      --shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      --shadow-hover: 0 12px 24px -12px rgba(0, 0, 0, 0.3);
     }
 
     body {
@@ -58,10 +58,10 @@
     .container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 28px;
     }
 
-    /* Theme Toggle */
+    /* Theme Toggle - Bottom Right */
     .theme-toggle {
       position: fixed;
       bottom: 24px;
@@ -69,22 +69,23 @@
       z-index: 1000;
       background: var(--bg-surface);
       border: 1px solid var(--border);
-      border-radius: 40px;
-      padding: 10px 16px;
+      border-radius: 50px;
+      padding: 10px 18px;
       display: flex;
-      gap: 12px;
+      gap: 14px;
       cursor: pointer;
       box-shadow: var(--shadow);
       transition: all 0.2s ease;
     }
     .theme-toggle:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
       box-shadow: var(--shadow-hover);
     }
     .theme-icon {
       font-size: 1rem;
       transition: all 0.2s;
-      opacity: 0.5;
+      opacity: 0.45;
+      color: var(--text-secondary);
     }
     body.light .light-icon,
     body.dark .dark-icon {
@@ -99,18 +100,17 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(8px);
     }
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      padding: 18px 0;
       flex-wrap: wrap;
       gap: 20px;
     }
     .logo {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 700;
       letter-spacing: -0.3px;
       color: var(--text-primary);
@@ -120,7 +120,7 @@
     }
     .nav-links {
       display: flex;
-      gap: 36px;
+      gap: 32px;
       list-style: none;
     }
     .nav-links a {
@@ -134,11 +134,22 @@
       color: var(--accent);
     }
 
-    /* Hero */
+    /* Hero - with fade-in animation */
     .hero {
-      padding: 70px 0 50px;
+      padding: 70px 0 55px;
       text-align: center;
       border-bottom: 1px solid var(--border);
+      animation: fadeInUp 0.6s ease-out;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .hero-badge {
       display: inline-block;
@@ -151,7 +162,7 @@
       margin-bottom: 24px;
     }
     .hero h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 700;
       letter-spacing: -0.8px;
       margin-bottom: 16px;
@@ -201,7 +212,6 @@
       transition: all 0.2s;
     }
     .btn-primary:hover {
-      background: var(--accent);
       filter: brightness(0.92);
       transform: translateY(-2px);
     }
@@ -227,7 +237,7 @@
 
     /* Sections */
     section {
-      padding: 60px 0;
+      padding: 55px 0;
       border-bottom: 1px solid var(--border);
     }
     .section-header {
@@ -256,12 +266,12 @@
       padding: 32px;
       margin-bottom: 32px;
       border: 1px solid var(--border);
-      transition: all 0.25s;
+      transition: all 0.25s ease;
     }
     .featured-card:hover {
       border-color: var(--accent);
+      transform: translateY(-4px);
       box-shadow: var(--shadow-hover);
-      transform: translateY(-2px);
     }
     .featured-badge {
       display: inline-block;
@@ -300,10 +310,11 @@
       padding: 24px;
       margin-bottom: 20px;
       border: 1px solid var(--border);
-      transition: all 0.2s;
+      transition: all 0.25s ease;
     }
     .card:hover {
       border-color: var(--accent);
+      transform: translateY(-3px);
       box-shadow: var(--shadow-hover);
     }
     .card-title {
@@ -345,6 +356,10 @@
       border-radius: 30px;
       font-size: 0.7rem;
       font-weight: 500;
+      transition: all 0.2s;
+    }
+    .tech-tag:hover {
+      transform: scale(1.02);
     }
     .project-link {
       background: transparent;
@@ -374,10 +389,11 @@
       padding: 24px;
       margin-bottom: 20px;
       border: 1px solid var(--border);
-      transition: all 0.2s;
+      transition: all 0.25s ease;
     }
     .info-card:hover {
       border-color: var(--accent);
+      transform: translateY(-2px);
     }
     .info-title {
       font-size: 1rem;
@@ -416,6 +432,7 @@
     }
     .cert-item:hover {
       border-color: var(--accent);
+      transform: translateY(-2px);
     }
     .cert-name {
       font-weight: 600;
@@ -494,6 +511,7 @@
 </head>
 <body class="light">
 
+<!-- Theme Toggle Button -->
 <div class="theme-toggle" id="themeToggle">
   <i class="fas fa-sun theme-icon light-icon"></i>
   <i class="fas fa-moon theme-icon dark-icon"></i>
@@ -604,7 +622,7 @@
       </div>
     </section>
 
-    <!-- Education & Experience -->
+    <!-- Education & Experience - CORRECTED -->
     <section id="education">
       <div class="section-header">
         <h2 class="section-title">Education & Experience</h2>
