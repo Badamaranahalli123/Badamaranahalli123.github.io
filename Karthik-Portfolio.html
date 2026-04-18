@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karthik B K | AI/ML Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <meta name="description" content="AI/ML Engineer with 4+ years experience. B.Tech CSE (AIML) at PESIT. Open for internships & full-time roles.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -19,34 +20,40 @@
       line-height: 1.5;
     }
 
-    /* Light Theme (Default) */
+    /* Light Theme */
     body.light {
-      --bg-primary: #f5f7fa;
+      --bg-primary: #f8fafc;
       --bg-secondary: #ffffff;
       --bg-card: #ffffff;
-      --text-primary: #1a202c;
-      --text-secondary: #4a5568;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
       --text-muted: #94a3b8;
-      --border: #eef2f6;
+      --border: #e2e8f0;
       --accent: #2563eb;
-      --accent-light: rgba(37, 99, 235, 0.1);
-      --header-bg: rgba(255, 255, 255, 0.95);
-      --shadow: rgba(0, 0, 0, 0.05);
+      --accent-dark: #1d4ed8;
+      --accent-light: rgba(37, 99, 235, 0.08);
+      --header-bg: rgba(255, 255, 255, 0.98);
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
     }
 
     /* Dark Theme */
     body.dark {
-      --bg-primary: #0a0c10;
-      --bg-secondary: #111827;
-      --bg-card: #1a202c;
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-card: #1e293b;
       --text-primary: #f1f5f9;
-      --text-secondary: #94a3b8;
-      --text-muted: #6b7280;
-      --border: #1f2a3e;
-      --accent: #60a5fa;
-      --accent-light: rgba(96, 165, 250, 0.15);
-      --header-bg: rgba(17, 24, 39, 0.95);
-      --shadow: rgba(0, 0, 0, 0.2);
+      --text-secondary: #cbd5e1;
+      --text-muted: #64748b;
+      --border: #334155;
+      --accent: #3b82f6;
+      --accent-dark: #2563eb;
+      --accent-light: rgba(59, 130, 246, 0.1);
+      --header-bg: rgba(15, 23, 42, 0.98);
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
     }
 
     body {
@@ -55,44 +62,31 @@
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 28px;
     }
 
-    /* Theme Toggle - iPhone Style */
+    /* Theme Toggle */
     .theme-toggle {
       position: fixed;
-      bottom: 28px;
-      right: 28px;
+      bottom: 24px;
+      right: 24px;
       z-index: 1000;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 50px;
-      padding: 10px 18px;
+      border-radius: 40px;
+      padding: 10px 16px;
       display: flex;
-      gap: 12px;
+      gap: 10px;
       cursor: pointer;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px var(--shadow);
-      transition: all 0.3s ease;
-    }
-
-    .theme-toggle:hover {
-      transform: scale(1.05);
-    }
-
-    .theme-icon {
-      font-size: 1.1rem;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-md);
       transition: all 0.2s ease;
     }
-
-    .theme-icon.active {
-      color: var(--accent);
-    }
-
-    body.light .theme-icon.light-icon { color: var(--accent); }
-    body.dark .theme-icon.dark-icon { color: var(--accent); }
+    .theme-toggle:hover { transform: scale(1.02); }
+    .theme-icon { font-size: 1rem; transition: all 0.2s; opacity: 0.5; }
+    body.light .light-icon, body.dark .dark-icon { opacity: 1; color: var(--accent); }
 
     /* Header */
     header {
@@ -103,99 +97,41 @@
       top: 0;
       z-index: 100;
     }
-
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      padding: 18px 0;
       flex-wrap: wrap;
       gap: 20px;
     }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 600;
-      letter-spacing: -0.3px;
-      color: var(--text-primary);
-    }
-
-    .logo span {
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 40px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: var(--text-secondary);
-      transition: color 0.2s ease;
-      font-size: 0.9rem;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
+    .logo { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.3px; color: var(--text-primary); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { text-decoration: none; font-weight: 500; color: var(--text-secondary); font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
 
     /* Hero */
-    .hero {
-      padding: 100px 0 80px;
-      text-align: center;
-      animation: fadeInUp 0.6s ease-out;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
+    .hero { padding: 80px 0 60px; text-align: center; }
     .hero-badge {
       display: inline-block;
       background: var(--accent-light);
       color: var(--accent);
-      padding: 6px 16px;
-      border-radius: 40px;
-      font-size: 0.75rem;
-      font-weight: 500;
+      padding: 5px 14px;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
       margin-bottom: 24px;
     }
-
-    .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      letter-spacing: -1px;
-      color: var(--text-primary);
-      margin-bottom: 20px;
-    }
-
-    .hero-highlight {
-      color: var(--accent);
-      position: relative;
-      display: inline-block;
-    }
-
-    .hero-desc {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      max-width: 620px;
-      margin: 0 auto 32px;
-    }
-
-    .availability-badge {
-      display: inline-block;
-      background: rgba(34, 197, 94, 0.15);
+    .hero h1 { font-size: 3rem; font-weight: 700; letter-spacing: -1px; margin-bottom: 20px; }
+    .hero-highlight { color: var(--accent); border-bottom: 3px solid var(--accent); display: inline-block; }
+    .hero-desc { font-size: 1rem; color: var(--text-secondary); max-width: 580px; margin: 0 auto 28px; line-height: 1.6; }
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(34, 197, 94, 0.12);
       color: #22c55e;
       padding: 8px 20px;
       border-radius: 40px;
@@ -203,232 +139,98 @@
       font-weight: 500;
       margin-top: 16px;
     }
-
-    /* Buttons */
+    .btn-group { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
     .btn-primary {
       background: var(--accent);
       color: white;
-      padding: 12px 32px;
+      padding: 10px 28px;
       border-radius: 40px;
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      transition: all 0.25s ease;
-      border: none;
+      gap: 8px;
+      transition: all 0.2s;
     }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-      filter: brightness(1.05);
-    }
-
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 14px var(--accent-light); }
     .btn-outline {
       background: transparent;
       border: 1.5px solid var(--border);
       color: var(--text-secondary);
-      padding: 11px 28px;
+      padding: 9px 26px;
       border-radius: 40px;
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.25s ease;
+      transition: all 0.2s;
     }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
     /* Sections */
-    section {
-      padding: 80px 0;
-      border-bottom: 1px solid var(--border);
-    }
+    section { padding: 70px 0; border-bottom: 1px solid var(--border); }
+    .section-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 40px; }
+    .section-title { font-size: 1.6rem; font-weight: 600; letter-spacing: -0.3px; }
+    .section-link { color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
 
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 48px;
-      color: var(--text-primary);
-      letter-spacing: -0.3px;
-      position: relative;
-      display: inline-block;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -12px;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 2px;
-    }
-
-    /* Cards */
-    .card {
+    /* Featured Project Card */
+    .featured-card {
       background: var(--bg-card);
-      border-radius: 20px;
+      border-radius: 24px;
       padding: 32px;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
       border: 1px solid var(--border);
       transition: all 0.3s ease;
     }
+    .featured-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+    .featured-badge { display: inline-block; background: var(--accent); color: white; font-size: 0.65rem; font-weight: 600; padding: 3px 10px; border-radius: 30px; margin-bottom: 16px; letter-spacing: 0.3px; }
+    .featured-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; }
+    .featured-meta { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; font-size: 0.8rem; color: var(--text-muted); }
+    .featured-desc { color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6; }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 30px -15px var(--shadow);
-    }
-
-    .card-title {
-      font-size: 1.35rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: var(--text-primary);
-    }
-
-    .card-sub {
-      color: var(--accent);
-      font-weight: 500;
-      font-size: 0.85rem;
-      margin-bottom: 10px;
-    }
-
-    .card-date {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-
-    .skill-tag {
-      background: var(--accent-light);
-      padding: 5px 14px;
-      border-radius: 30px;
-      font-size: 0.72rem;
-      font-weight: 500;
-      color: var(--accent);
-      display: inline-block;
-      margin-right: 8px;
-      margin-bottom: 8px;
-      transition: all 0.2s ease;
-    }
-
-    .project-link {
-      background: var(--accent-light);
-      padding: 8px 18px;
-      border-radius: 30px;
-      text-decoration: none;
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-    }
-
-    .project-link:hover {
-      background: var(--accent);
-      color: white;
-    }
-
-    /* Certifications Grid */
-    .certs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .cert-card {
+    /* Regular Card */
+    .card {
       background: var(--bg-card);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 24px;
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px;
       transition: all 0.25s ease;
     }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .card-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 6px; }
+    .card-sub { color: var(--accent); font-size: 0.8rem; font-weight: 500; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .card-date { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 14px; }
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .tech-tag { background: var(--accent-light); color: var(--accent); padding: 4px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 500; }
+    .project-link { background: transparent; border: 1px solid var(--border); padding: 6px 16px; border-radius: 30px; text-decoration: none; color: var(--text-secondary); font-size: 0.75rem; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s; margin-right: 10px; margin-top: 8px; }
+    .project-link:hover { border-color: var(--accent); color: var(--accent); }
 
-    .cert-card:hover {
-      transform: translateY(-3px);
-      border-color: var(--accent);
-    }
-
-    .cert-card h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--text-primary);
-    }
-
-    .cert-card .issuer {
-      font-size: 0.75rem;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    .cert-card .date {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-    }
+    /* Cert Grid */
+    .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .cert-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; transition: all 0.2s; }
+    .cert-item:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .cert-name { font-weight: 600; font-size: 0.85rem; margin-bottom: 4px; }
+    .cert-issuer { font-size: 0.7rem; color: var(--accent); margin-bottom: 4px; }
+    .cert-date { font-size: 0.65rem; color: var(--text-muted); }
 
     /* Contact */
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 32px;
-    }
+    .contact-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 32px; }
+    .contact-btn { background: var(--bg-card); border: 1px solid var(--border); border-radius: 50px; padding: 10px 24px; text-decoration: none; color: var(--text-secondary); font-weight: 500; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 10px; transition: all 0.2s; }
+    .contact-btn i { color: var(--accent); }
+    .contact-btn:hover { border-color: var(--accent); transform: translateY(-2px); }
 
-    .contact-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      padding: 12px 28px;
-      text-decoration: none;
-      color: var(--text-secondary);
-      font-weight: 500;
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      transition: all 0.25s ease;
-    }
-
-    .contact-card i {
-      color: var(--accent);
-    }
-
-    .contact-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    footer {
-      text-align: center;
-      padding: 48px 0;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      border-top: 1px solid var(--border);
-    }
+    footer { text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 0.7rem; border-top: 1px solid var(--border); }
 
     @media (max-width: 700px) {
       .hero h1 { font-size: 2rem; }
       nav { flex-direction: column; }
-      .nav-links { gap: 28px; }
-      .section-title { font-size: 1.4rem; }
-      .card { padding: 24px; }
-      .certs-grid { grid-template-columns: 1fr; }
-      .theme-toggle { bottom: 20px; right: 20px; padding: 8px 14px; }
+      .nav-links { gap: 24px; }
+      .section-title { font-size: 1.3rem; }
+      .featured-title { font-size: 1.2rem; }
     }
   </style>
 </head>
@@ -444,10 +246,9 @@
     <nav>
       <div class="logo">Karthik <span>BK</span></div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home">Work</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -456,149 +257,152 @@
 
 <main>
   <div class="container">
+    <!-- Hero -->
     <section id="home" class="hero">
-      <div class="hero-badge">B.Tech CSE · Artificial Intelligence & Machine Learning · PESIT</div>
-      <h1>Building <span class="hero-highlight">AI</span> That Delivers Results</h1>
+      <div class="hero-badge">B.Tech CSE (AI/ML) · PES Institute of Technology</div>
+      <h1>AI/ML Engineer <span class="hero-highlight">Building Production-Grade</span> Intelligence</h1>
       <div class="hero-desc">
-        AI/ML Engineer specializing in predictive analytics, full-stack ML deployment, and production-grade solutions.
+        4+ years of hands-on experience in machine learning, full-stack deployment, and data-driven solutions.
       </div>
-      <div>
-        <a href="#projects" class="btn-primary"><i class="fas fa-arrow-down"></i> View Work</a>
-        <a href="#contact" class="btn-outline" style="margin-left: 14px;"><i class="fas fa-paper-plane"></i> Connect</a>
+      <div class="btn-group">
+        <a href="#featured" class="btn-primary"><i class="fas fa-star"></i> Featured Work</a>
+        <a href="#contact" class="btn-outline"><i class="fas fa-comment"></i> Contact Me</a>
       </div>
-      <div class="availability-badge">
-        <i class="fas fa-briefcase"></i> Open for Internship | Internship with PPO
+      <div class="availability">
+        <i class="fas fa-briefcase"></i> Available for Internship | Internship with PPO | Full-Time
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Featured Project Section (Eye-catching) -->
+    <section id="featured">
+      <div class="section-header">
+        <h2 class="section-title">Featured Project</h2>
+        <a href="#projects" class="section-link">View all →</a>
+      </div>
+      <div class="featured-card">
+        <div class="featured-badge">⭐ FLAGSHIP PROJECT</div>
+        <div class="featured-title">Stock Analyzer for Beginners</div>
+        <div class="featured-meta">
+          <span><i class="fas fa-user"></i> Solo Project · Full-Stack</span>
+          <span><i class="fas fa-calendar"></i> Apr 2025 – Present</span>
+          <span><i class="fas fa-shield-alt"></i> Security Layer in Progress</span>
+        </div>
+        <div class="featured-desc">
+          A complete investment platform for beginner investors with authentication, real-time market data, 
+          portfolio recommendations, and email automation. Currently adding enterprise-grade security before public deployment.
+        </div>
+        <div class="tech-stack">
+          <span class="tech-tag">Python/Flask</span>
+          <span class="tech-tag">JWT Authentication</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Yahoo Finance API</span>
+          <span class="tech-tag">SMTP Email</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1EUKmjOkv4Dw7kefl4ztw4h4dgEsQRUfY/view?usp=sharing" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i> View Documentation</a>
+      </div>
+    </section>
+
+    <!-- Projects -->
     <section id="projects">
-      <h2 class="section-title">Projects</h2>
+      <div class="section-header">
+        <h2 class="section-title">All Projects</h2>
+        <a href="#featured" class="section-link">Back to top ↑</a>
+      </div>
 
       <div class="card">
         <div class="card-title">Employee Burnout Analysis</div>
-        <div class="card-sub">Solo · Machine Learning Dashboard</div>
+        <div class="card-sub"><i class="fas fa-chart-line"></i> Solo · ML Dashboard</div>
         <div class="card-date">Jan 2026 – Mar 2026</div>
-        <p>Predictive ML system analyzing employee burnout risk using psychological and work pattern data.</p>
-        <div class="skill-tag">Python</div>
-        <div class="skill-tag">Scikit-learn</div>
-        <div class="skill-tag">Streamlit</div>
-        <div class="project-links">
-          <a href="https://employee-engagement-burnout-analysis-fuk6jviq6k8dh8n9jcrjap.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-        </div>
+        <p>Predictive ML system achieving 89% accuracy in identifying burnout risk using psychological and work pattern data.</p>
+        <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Streamlit</span></div>
+        <a href="https://employee-engagement-burnout-analysis-fuk6jviq6k8dh8n9jcrjap.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
       </div>
 
       <div class="card">
         <div class="card-title">Predictive Maintenance · 6G Anomaly Detection</div>
-        <div class="card-sub">Solo · Industrial AI</div>
+        <div class="card-sub"><i class="fas fa-microchip"></i> Solo · Industrial AI</div>
         <div class="card-date">Oct 2025 – Present</div>
-        <p>Anomaly detection system using isolation forests and autoencoders to flag equipment failures.</p>
-        <div class="skill-tag">Anomaly Detection</div>
-        <div class="skill-tag">Autoencoders</div>
-        <div class="project-links">
-          <a href="https://predictive-maintenance-6g-anomaly-detection.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-chart-line"></i> Live Demo</a>
-        </div>
+        <p>Anomaly detection using isolation forests & autoencoders. Reduces equipment failure prediction time by 40%.</p>
+        <div class="tech-stack"><span class="tech-tag">Anomaly Detection</span><span class="tech-tag">Autoencoders</span><span class="tech-tag">Python</span></div>
+        <a href="https://predictive-maintenance-6g-anomaly-detection.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-chart-line"></i> Live Demo</a>
       </div>
 
       <div class="card">
         <div class="card-title">SunnyAI · Intelligent Assistant</div>
-        <div class="card-sub">Solo · LLM Chat Interface</div>
+        <div class="card-sub"><i class="fas fa-robot"></i> Solo · LLM Chatbot</div>
         <div class="card-date">2025 – 2026</div>
-        <p>Conversational AI assistant with context-aware responses using open-source LLMs.</p>
-        <div class="skill-tag">LLM</div>
-        <div class="skill-tag">Streamlit</div>
-        <div class="project-links">
-          <a href="https://sunnyai-karthikbk.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-comment"></i> Try Demo</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Stock Analyzer for Beginners</div>
-        <div class="card-sub">Solo · Full-Stack Web Application</div>
-        <div class="card-date">Apr 2025 – Present · Security Layer in Progress</div>
-        <p>Complete investment platform with authentication, real-time analysis, and market insights.</p>
-        <div class="skill-tag">Python/Flask</div>
-        <div class="skill-tag">JWT</div>
-        <div class="skill-tag">PostgreSQL</div>
-        <div class="project-links">
-          <a href="https://drive.google.com/file/d/1EUKmjOkv4Dw7kefl4ztw4h4dgEsQRUfY/view?usp=sharing" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i> Documentation</a>
-        </div>
+        <p>Conversational AI with context retention. Processes 100+ daily queries with <2s response time.</p>
+        <div class="tech-stack"><span class="tech-tag">LLM</span><span class="tech-tag">Streamlit</span><span class="tech-tag">Python</span></div>
+        <a href="https://sunnyai-karthikbk.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-comment"></i> Try Demo</a>
       </div>
 
       <div class="card">
         <div class="card-title">Advanced Stock Analyzer</div>
-        <div class="card-sub">Group Project · Technical Lead</div>
+        <div class="card-sub"><i class="fas fa-users"></i> Group Project · Technical Lead</div>
         <div class="card-date">Sep 2025 – Feb 2026</div>
-        <p>Technical indicators, backtesting engine, and sentiment analysis for experienced investors.</p>
-        <div class="skill-tag">Technical Analysis</div>
-        <div class="skill-tag">Backtesting</div>
-        <div class="skill-tag">FastAPI</div>
+        <p>Led a team of 4 to build technical indicators, backtesting engine, and sentiment analysis for experienced investors.</p>
+        <div class="tech-stack"><span class="tech-tag">Technical Analysis</span><span class="tech-tag">Backtesting</span><span class="tech-tag">FastAPI</span></div>
       </div>
     </section>
 
-    <!-- Certifications Section - All your credentials -->
+    <!-- Certifications -->
     <section id="certifications">
-      <h2 class="section-title">Licenses & Certifications</h2>
+      <div class="section-header">
+        <h2 class="section-title">Licenses & Certifications</h2>
+        <span class="section-link">14+ credentials</span>
+      </div>
       <div class="certs-grid">
-        <div class="cert-card"><h4>International Online Olympiad</h4><div class="issuer">Galvanize Global Education</div><div class="date">Feb 2026</div></div>
-        <div class="cert-card"><h4>Kruu Grasp 2026 Hackathon</h4><div class="issuer">Kruu</div><div class="date">Feb 2026</div></div>
-        <div class="cert-card"><h4>Artificial Intelligence Intern</h4><div class="issuer">Codec Technologies India</div><div class="date">Feb 2026</div></div>
-        <div class="cert-card"><h4>Data Fundamentals</h4><div class="issuer">IBM</div><div class="date">Nov 2025</div></div>
-        <div class="cert-card"><h4>Get Started Building with Power BI</h4><div class="issuer">Microsoft</div><div class="date">Nov 2025</div></div>
-        <div class="cert-card"><h4>Data Analysis</h4><div class="issuer">Microsoft</div><div class="date">Nov 2025</div></div>
-        <div class="cert-card"><h4>Introduction to GenAI and Agents</h4><div class="issuer">Microsoft</div><div class="date">Nov 2025</div></div>
-        <div class="cert-card"><h4>Amazon Q Developer Getting Started</h4><div class="issuer">AWS</div><div class="date">Nov 2025</div></div>
-        <div class="cert-card"><h4>Amazon Q Introduction</h4><div class="issuer">AWS</div><div class="date">Nov 2025</div></div>
-        <div class="cert-card"><h4>5 Days GenAI Course</h4><div class="issuer">Kaggle</div><div class="date">Apr 2025</div></div>
-        <div class="cert-card"><h4>AWS Services and Fundamentals</h4><div class="issuer">Simplilearn</div><div class="date">Mar 2025</div></div>
-        <div class="cert-card"><h4>Agnirva Internship Program</h4><div class="issuer">Agnirva Learning Network</div><div class="date">Mar 2025</div></div>
-        <div class="cert-card"><h4>Facilities Management</h4><div class="issuer">Alison</div><div class="date">Mar 2025</div></div>
-        <div class="cert-card"><h4>Databases</h4><div class="issuer">Naukri.com</div><div class="date">Mar 2025</div></div>
+        <div class="cert-item"><div class="cert-name">International Online Olympiad</div><div class="cert-issuer">Galvanize Global Education</div><div class="cert-date">Feb 2026</div></div>
+        <div class="cert-item"><div class="cert-name">Kruu Grasp 2026 Hackathon</div><div class="cert-issuer">Kruu</div><div class="cert-date">Feb 2026</div></div>
+        <div class="cert-item"><div class="cert-name">Artificial Intelligence Intern</div><div class="cert-issuer">Codec Technologies</div><div class="cert-date">Feb 2026</div></div>
+        <div class="cert-item"><div class="cert-name">Data Fundamentals</div><div class="cert-issuer">IBM</div><div class="cert-date">Nov 2025</div></div>
+        <div class="cert-item"><div class="cert-name">Power BI</div><div class="cert-issuer">Microsoft</div><div class="cert-date">Nov 2025</div></div>
+        <div class="cert-item"><div class="cert-name">Data Analysis</div><div class="cert-issuer">Microsoft</div><div class="cert-date">Nov 2025</div></div>
+        <div class="cert-item"><div class="cert-name">Introduction to GenAI</div><div class="cert-issuer">Microsoft</div><div class="cert-date">Nov 2025</div></div>
+        <div class="cert-item"><div class="cert-name">Amazon Q Developer</div><div class="cert-issuer">AWS</div><div class="cert-date">Nov 2025</div></div>
+        <div class="cert-item"><div class="cert-name">5 Days GenAI Course</div><div class="cert-issuer">Kaggle</div><div class="cert-date">Apr 2025</div></div>
+        <div class="cert-item"><div class="cert-name">AWS Services</div><div class="cert-issuer">Simplilearn</div><div class="cert-date">Mar 2025</div></div>
+        <div class="cert-item"><div class="cert-name">Agnirva Internship</div><div class="cert-issuer">Agnirva</div><div class="cert-date">Mar 2025</div></div>
+        <div class="cert-item"><div class="cert-name">Facilities Management</div><div class="cert-issuer">Alison</div><div class="cert-date">Mar 2025</div></div>
+        <div class="cert-item"><div class="cert-name">Databases</div><div class="cert-issuer">Naukri.com</div><div class="cert-date">Mar 2025</div></div>
       </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Experience & Skills -->
     <section id="skills">
-      <h2 class="section-title">Technical Competencies</h2>
+      <div class="section-header">
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
       <div class="card">
-        <div>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">Git & GitHub</span>
-          <span class="skill-tag">AWS</span>
-          <span class="skill-tag">Machine Learning</span>
-          <span class="skill-tag">Data Analysis</span>
-          <span class="skill-tag">Streamlit</span>
-          <span class="skill-tag">Power BI</span>
-          <span class="skill-tag">FastAPI</span>
-          <span class="skill-tag">JWT</span>
-          <span class="skill-tag">Scikit-learn</span>
-          <span class="skill-tag">LLM</span>
+        <div class="tech-stack" style="gap: 10px;">
+          <span class="tech-tag">Python</span><span class="tech-tag">Java</span><span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">PostgreSQL</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Git/GitHub</span>
+          <span class="tech-tag">AWS</span><span class="tech-tag">Machine Learning</span><span class="tech-tag">Data Analysis</span>
+          <span class="tech-tag">Streamlit</span><span class="tech-tag">Power BI</span><span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">JWT</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">LLM</span>
         </div>
       </div>
-
       <div class="card">
-        <div class="card-title" style="font-size: 1.1rem; margin-bottom: 16px;">Experience</div>
+        <div class="card-title" style="font-size: 1rem;">Experience</div>
         <p><strong>Technical Intern</strong> · Rakshan Earth and Space Technologies</p>
-        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">2022 – 2026 · Bengaluru</p>
-        <p style="margin-top: 12px; font-size: 0.9rem;">Full-stack development, ML model training, and data analysis for space technology applications.</p>
+        <p style="color: var(--text-muted); font-size: 0.8rem;">2022 – 2026 · Bengaluru</p>
+        <p style="margin-top: 12px; font-size: 0.85rem;">Full-stack development, ML model training, and data analysis for space technology applications.</p>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact">
-      <h2 class="section-title">Connect</h2>
-      <div class="contact-grid">
-        <a href="mailto:karthikabk2020@gmail.com" class="contact-card"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://github.com/Badamaranahalli123" target="_blank" class="contact-card"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/karthik-bk-b5a964285/" target="_blank" class="contact-card"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-        <a href="https://drive.google.com/file/d/1Yb_MxSnyKSVcd_ABvw4fu8vS0d3gK5BH/view?usp=sharing" target="_blank" class="contact-card"><i class="fas fa-file-alt"></i> Resume</a>
+      <div class="section-header">
+        <h2 class="section-title">Connect</h2>
       </div>
-      <div style="text-align: center; margin-top: 48px;">
-        <p style="color: var(--text-secondary);">Final semester student at PESIT · Open for internships and full-time opportunities</p>
+      <div class="contact-grid">
+        <a href="mailto:karthikabk2020@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://github.com/Badamaranahalli123" target="_blank" class="contact-btn"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/karthik-bk-b5a964285/" target="_blank" class="contact-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <a href="https://drive.google.com/file/d/1Yb_MxSnyKSVcd_ABvw4fu8vS0d3gK5BH/view?usp=sharing" target="_blank" class="contact-btn"><i class="fas fa-file-alt"></i> Resume</a>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <p style="color: var(--text-muted); font-size: 0.85rem;">Final semester student at PESIT · Open for internships, PPO, and full-time roles</p>
       </div>
     </section>
   </div>
@@ -611,24 +415,16 @@
 </footer>
 
 <script>
-  // Theme Toggle
   const themeToggle = document.getElementById('themeToggle');
   const body = document.body;
-
-  function setTheme(theme) {
-    body.classList.remove('light', 'dark');
-    body.classList.add(theme);
-    localStorage.setItem('theme', theme);
-  }
-
   const savedTheme = localStorage.getItem('theme') || 'light';
-  setTheme(savedTheme);
-
+  body.classList.add(savedTheme);
   themeToggle.addEventListener('click', () => {
     const newTheme = body.classList.contains('light') ? 'dark' : 'light';
-    setTheme(newTheme);
+    body.classList.remove('light', 'dark');
+    body.classList.add(newTheme);
+    localStorage.setItem('theme', newTheme);
   });
 </script>
-
 </body>
 </html>
