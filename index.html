@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karthik B K | AI/ML Engineer</title>
+  <title>Karthik B K | 3D AI/ML Portfolio</title>
   <meta name="description" content="B.Tech CSE AIML at PES University RR Campus. AI/ML Engineer open for internships.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -16,38 +16,41 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      transition: background-color 0.3s ease, color 0.2s ease;
+      transition: background-color 0.3s ease;
       line-height: 1.5;
+      overflow-x: hidden;
     }
 
     /* Light Theme */
     body.light {
-      --bg-body: #f8fafc;
-      --bg-surface: #ffffff;
-      --bg-card: #ffffff;
+      --bg-body: #f0f4f8;
+      --bg-surface: rgba(255, 255, 255, 0.85);
+      --bg-card: rgba(255, 255, 255, 0.75);
       --text-primary: #0f172a;
-      --text-secondary: #475569;
+      --text-secondary: #334155;
       --text-muted: #64748b;
-      --border: #e2e8f0;
+      --border: rgba(0, 0, 0, 0.08);
       --accent: #2563eb;
-      --accent-light: #eef2ff;
-      --shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-      --shadow-hover: 0 12px 24px -12px rgba(0, 0, 0, 0.1);
+      --accent-light: rgba(37, 99, 235, 0.15);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 25px 40px -12px rgba(0, 0, 0, 0.2);
+      --glass-border: rgba(255, 255, 255, 0.4);
     }
 
     /* Dark Theme */
     body.dark {
-      --bg-body: #0f172a;
-      --bg-surface: #1e293b;
-      --bg-card: #1e293b;
+      --bg-body: #0a0f1a;
+      --bg-surface: rgba(18, 25, 45, 0.85);
+      --bg-card: rgba(18, 25, 45, 0.75);
       --text-primary: #f1f5f9;
       --text-secondary: #cbd5e1;
       --text-muted: #94a3b8;
-      --border: #334155;
+      --border: rgba(255, 255, 255, 0.08);
       --accent: #60a5fa;
-      --accent-light: #1e293b;
-      --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-      --shadow-hover: 0 12px 24px -12px rgba(0, 0, 0, 0.4);
+      --accent-light: rgba(96, 165, 250, 0.15);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      --shadow-hover: 0 25px 40px -12px rgba(0, 0, 0, 0.4);
+      --glass-border: rgba(255, 255, 255, 0.1);
     }
 
     body {
@@ -55,43 +58,29 @@
       color: var(--text-primary);
     }
 
+    /* 3D Canvas Background */
+    #canvas3d {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 28px;
+      position: relative;
+      z-index: 2;
     }
 
-    /* Theme Toggle */
-    .theme-toggle {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 1000;
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      padding: 10px 18px;
-      display: flex;
-      gap: 14px;
-      cursor: pointer;
-      box-shadow: var(--shadow);
-      transition: all 0.2s;
-    }
-    .theme-toggle:hover {
-      transform: scale(1.03);
-    }
-    .theme-icon {
-      font-size: 1rem;
-      opacity: 0.5;
-    }
-    body.light .light-icon, body.dark .dark-icon {
-      opacity: 1;
-      color: var(--accent);
-    }
-
-    /* Header */
+    /* Glassmorphism Header */
     header {
       background: var(--bg-surface);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
@@ -106,13 +95,13 @@
       gap: 20px;
     }
     .logo {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), #a855f7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
       letter-spacing: -0.3px;
-      color: var(--text-primary);
-    }
-    .logo span {
-      color: var(--accent);
     }
     .nav-links {
       display: flex;
@@ -124,23 +113,73 @@
       font-weight: 500;
       color: var(--text-secondary);
       font-size: 0.9rem;
-      transition: color 0.2s;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), #a855f7);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after {
+      width: 100%;
     }
     .nav-links a:hover {
       color: var(--accent);
     }
 
-    /* About Section */
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      background: var(--bg-surface);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 10px 18px;
+      display: flex;
+      gap: 14px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .theme-toggle:hover {
+      transform: scale(1.08);
+    }
+    .theme-icon {
+      font-size: 1rem;
+      opacity: 0.5;
+      transition: all 0.2s;
+    }
+    body.light .light-icon, body.dark .dark-icon {
+      opacity: 1;
+      color: var(--accent);
+    }
+
+    /* 3D About Section */
     .about-section {
-      padding: 60px 0 40px;
+      padding: 70px 0 50px;
       display: flex;
       flex-wrap: wrap;
       gap: 48px;
       align-items: center;
       border-bottom: 1px solid var(--border);
+      perspective: 1000px;
     }
     .about-image {
       flex: 0 0 180px;
+      transform-style: preserve-3d;
+      transition: transform 0.4s ease;
+    }
+    .about-image:hover {
+      transform: rotateY(8deg) rotateX(4deg);
     }
     .about-image img {
       width: 100%;
@@ -149,26 +188,36 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--accent);
-      box-shadow: var(--shadow-hover);
+      box-shadow: 0 20px 35px -10px rgba(37, 99, 235, 0.3);
     }
     .about-content {
       flex: 1;
     }
     .about-badge {
       display: inline-block;
-      background: var(--accent-light);
-      color: var(--accent);
-      padding: 4px 12px;
+      background: linear-gradient(135deg, var(--accent), #7c3aed);
+      color: white;
+      padding: 5px 14px;
       border-radius: 30px;
       font-size: 0.7rem;
       font-weight: 600;
       margin-bottom: 16px;
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
     }
     .about-content h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -1px;
       margin-bottom: 8px;
+      background: linear-gradient(135deg, var(--text-primary), var(--accent), #a855f7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: floatText 4s ease-in-out infinite;
+    }
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
     }
     .about-title {
       font-size: 0.95rem;
@@ -185,12 +234,13 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(34, 197, 94, 0.12);
+      background: rgba(34, 197, 94, 0.15);
       color: #22c55e;
       padding: 6px 16px;
       border-radius: 40px;
       font-size: 0.75rem;
       font-weight: 500;
+      backdrop-filter: blur(4px);
     }
     .btn-group {
       display: flex;
@@ -199,9 +249,9 @@
       margin-top: 20px;
     }
     .btn-primary {
-      background: var(--accent);
+      background: linear-gradient(135deg, var(--accent), #7c3aed);
       color: white;
-      padding: 10px 26px;
+      padding: 12px 28px;
       border-radius: 40px;
       text-decoration: none;
       font-weight: 500;
@@ -209,17 +259,19 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.2s;
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
     }
     .btn-primary:hover {
-      filter: brightness(0.92);
-      transform: translateY(-2px);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
     }
     .btn-outline {
-      background: transparent;
+      background: var(--bg-surface);
+      backdrop-filter: blur(8px);
       border: 1.5px solid var(--border);
       color: var(--text-secondary);
-      padding: 9px 24px;
+      padding: 11px 26px;
       border-radius: 40px;
       text-decoration: none;
       font-weight: 500;
@@ -227,11 +279,12 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.2s;
+      transition: all 0.3s;
     }
     .btn-outline:hover {
       border-color: var(--accent);
       color: var(--accent);
+      transform: translateY(-3px);
     }
 
     /* Sections */
@@ -247,43 +300,44 @@
       margin-bottom: 32px;
     }
     .section-title {
-      font-size: 1.5rem;
-      font-weight: 600;
+      font-size: 1.8rem;
+      font-weight: 700;
       letter-spacing: -0.3px;
-    }
-    .section-link {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 500;
+      background: linear-gradient(135deg, var(--text-primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
-    /* Cards */
-    .featured-card, .card, .info-card {
+    /* 3D Glass Cards */
+    .featured-card, .card, .info-card, .cert-item {
       background: var(--bg-card);
-      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
       padding: 28px;
       margin-bottom: 24px;
-      border: 1px solid var(--border);
-      transition: all 0.25s;
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      transform-style: preserve-3d;
+      transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
     }
-    .featured-card:hover, .card:hover, .info-card:hover {
-      transform: translateY(-3px);
+    .featured-card:hover, .card:hover, .info-card:hover, .cert-item:hover {
+      transform: perspective(1000px) rotateX(3deg) translateY(-8px);
       box-shadow: var(--shadow-hover);
       border-color: var(--accent);
     }
     .featured-badge {
       display: inline-block;
-      background: var(--accent);
+      background: linear-gradient(135deg, var(--accent), #7c3aed);
       color: white;
       font-size: 0.65rem;
       font-weight: 600;
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: 30px;
       margin-bottom: 16px;
     }
     .featured-title, .card-title {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 8px;
     }
@@ -308,35 +362,7 @@
       font-size: 0.85rem;
     }
 
-    /* Skills Section */
-    .skills-section {
-      background: var(--bg-card);
-      border-radius: 20px;
-      padding: 28px;
-      border: 1px solid var(--border);
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 12px;
-    }
-    .skill-item {
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      border-radius: 40px;
-      padding: 8px 16px;
-      text-align: center;
-      transition: all 0.2s;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-    }
-    .skill-item:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-    }
-
+    /* Tech Tags */
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
@@ -346,13 +372,17 @@
     .tech-tag {
       background: var(--accent-light);
       color: var(--accent);
-      padding: 4px 12px;
+      padding: 5px 12px;
       border-radius: 30px;
       font-size: 0.7rem;
       font-weight: 500;
+      transition: all 0.2s;
+    }
+    .tech-tag:hover {
+      transform: scale(1.05);
     }
     .project-link {
-      background: transparent;
+      background: var(--bg-surface);
       border: 1px solid var(--border);
       padding: 5px 14px;
       border-radius: 30px;
@@ -370,6 +400,36 @@
     .project-link:hover {
       border-color: var(--accent);
       color: var(--accent);
+    }
+
+    /* Skills Grid */
+    .skills-section {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 28px;
+      border: 1px solid var(--glass-border);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px;
+    }
+    .skill-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 8px 16px;
+      text-align: center;
+      transition: all 0.3s;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .skill-item:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-3px) scale(1.02);
     }
 
     .info-card {
@@ -404,15 +464,8 @@
       gap: 14px;
     }
     .cert-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 14px 16px;
-      transition: all 0.2s;
-    }
-    .cert-item:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
     }
     .cert-name {
       font-weight: 600;
@@ -439,6 +492,7 @@
     }
     .contact-btn {
       background: var(--bg-card);
+      backdrop-filter: blur(8px);
       border: 1px solid var(--border);
       border-radius: 50px;
       padding: 10px 24px;
@@ -449,14 +503,14 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      transition: all 0.2s;
+      transition: all 0.3s;
     }
     .contact-btn i {
       color: var(--accent);
     }
     .contact-btn:hover {
       border-color: var(--accent);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
     footer {
@@ -473,14 +527,13 @@
         text-align: center;
       }
       .about-image {
-        flex: 0 0 auto;
         margin: 0 auto;
+      }
+      .about-content h1 {
+        font-size: 2.2rem;
       }
       .btn-group {
         justify-content: center;
-      }
-      .section-title {
-        font-size: 1.3rem;
       }
       .skills-grid {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -490,6 +543,8 @@
 </head>
 <body class="light">
 
+<canvas id="canvas3d"></canvas>
+
 <div class="theme-toggle" id="themeToggle">
   <i class="fas fa-sun theme-icon light-icon"></i>
   <i class="fas fa-moon theme-icon dark-icon"></i>
@@ -498,7 +553,7 @@
 <header>
   <div class="container">
     <nav>
-      <div class="logo">Karthik <span>BK</span></div>
+      <div class="logo">Karthik <span style="color:var(--accent)">BK</span></div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -513,7 +568,7 @@
 <main>
   <div class="container">
     <!-- About Section -->
-    <div class="about-section">
+    <div class="about-section" id="about">
       <div class="about-image">
         <img src="https://badamaranahalli123.github.io/mine.jpg" alt="Karthik B K" onerror="this.src='https://ui-avatars.com/api/?name=Karthik+BK&background=2563eb&color=fff&size=180'">
       </div>
@@ -540,7 +595,7 @@
     <section id="featured">
       <div class="section-header">
         <h2 class="section-title">Featured Project</h2>
-        <a href="#projects" class="section-link">All projects →</a>
+        <a href="#projects" class="section-link" style="color:var(--accent);">All projects →</a>
       </div>
       <div class="featured-card">
         <div class="featured-badge">FLAGSHIP</div>
@@ -569,7 +624,7 @@
     <section id="projects">
       <div class="section-header">
         <h2 class="section-title">Projects</h2>
-        <a href="#featured" class="section-link">↑ Back to top</a>
+        <a href="#featured" class="section-link" style="color:var(--accent);">↑ Back to top</a>
       </div>
 
       <div class="card">
@@ -638,7 +693,7 @@
     <section id="certifications">
       <div class="section-header">
         <h2 class="section-title">Certifications</h2>
-        <span class="section-link">14 credentials</span>
+        <span class="section-link" style="color:var(--accent);">14 credentials</span>
       </div>
       <div class="certs-grid">
         <div class="cert-item"><div class="cert-name">International Online Olympiad</div><div class="cert-issuer">Galvanize</div><div class="cert-date">Feb 2026</div></div>
@@ -709,6 +764,7 @@
 </footer>
 
 <script>
+  // Theme Toggle
   const themeToggle = document.getElementById('themeToggle');
   const body = document.body;
   const savedTheme = localStorage.getItem('theme') || 'light';
@@ -719,6 +775,57 @@
     body.classList.add(newTheme);
     localStorage.setItem('theme', newTheme);
   });
+
+  // 3D Particle Background
+  const canvas = document.getElementById('canvas3d');
+  const ctx = canvas.getContext('2d');
+  
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  let particles = [];
+  const particleCount = 120;
+
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 2.5 + 1,
+      speedX: (Math.random() - 0.5) * 0.4,
+      speedY: (Math.random() - 0.5) * 0.3,
+      opacity: Math.random() * 0.4 + 0.2
+    });
+  }
+
+  function animateBackground() {
+    if (!canvas || !ctx) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    const isDark = body.classList.contains('dark');
+    
+    for (let p of particles) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = isDark ? `rgba(96, 165, 250, ${p.opacity * 0.5})` : `rgba(37, 99, 235, ${p.opacity * 0.4})`;
+      ctx.fill();
+      
+      p.x += p.speedX;
+      p.y += p.speedY;
+      
+      if (p.x < -20) p.x = canvas.width + 20;
+      if (p.x > canvas.width + 20) p.x = -20;
+      if (p.y < -20) p.y = canvas.height + 20;
+      if (p.y > canvas.height + 20) p.y = -20;
+    }
+    
+    requestAnimationFrame(animateBackground);
+  }
+  
+  animateBackground();
 </script>
 </body>
 </html>
